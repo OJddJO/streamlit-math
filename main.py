@@ -10,7 +10,7 @@ columns = st.columns(2)
 with columns[0]:
     st.header("Input")
     st.text_area(label="Input", placeholder="Input", key="input", value=st.session_state.text, height=600, label_visibility="collapsed")
-    with st.button("Update"):
+    if st.button("Update"):
         st.session_state.text = st.session_state.input
         st.experimental_rerun()
 
