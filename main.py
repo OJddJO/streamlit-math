@@ -12,5 +12,5 @@ with columns[0]:
     if st.button("Update"):
         st.session_state.text = input
         with columns[1]:
-            st.write(st.session_state.text)
+            st.magic(st.session_state.text)
 
