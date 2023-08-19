@@ -15,11 +15,12 @@ if st.button("Add a new box"):
         with elements.dashboard.Grid([st.session_state.layout[-1]]):
             tabs = st.tabs(["View", "Edit"])
             with tabs[0]:
+                st.session_state.text.append("")
                 def update_text(value):
                     st.session_state.text[-1] = value
                 elements.editor.Monaco(
                     height=200,
-                    value="",
+                    value=st.session_state.text[-1],
                     onChange=update_text,
                 )
                 elements.mui.Button("Update content", onClick=elements.sync())
