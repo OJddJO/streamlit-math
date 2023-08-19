@@ -13,7 +13,7 @@ if st.button("Add a new box"):
         # Add a new tab
         st.session_state.layout.append(elements.dashboard.Item(i=f"Box {len(st.session_state.layout)+1}", x=len(st.session_state.layout)%2, y=len(st.session_state.layout)//2, w=1, h=1))
         with elements.dashboard.Grid([st.session_state.layout[-1]]):
-            tabs = st.tabs(["View", "Edit"])
+            tabs = st.tabs(["Edit", "View"])
             with tabs[0]:
                 st.session_state.text.append("")
                 def update_text(value):
