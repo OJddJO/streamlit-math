@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Math", page_icon="🟰")
+st.set_page_config(page_title="Math", page_icon="🟰", layout="wide")
 st.title("Math")
 
 st.session_state.text = 'Hello World!'
