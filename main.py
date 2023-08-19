@@ -12,7 +12,7 @@ def update_data():
     st.experimental_rerun()
 
 with columns[0]:
-    input = st.text_area(label="Input", placeholder="Input", key="input", value=st.session_state.text, height=200, label_visibility="collapsed", on_change=update_data)
+    input = st.text_area(label="Input", placeholder="Input", key="input", value=st.session_state.text, height=200, label_visibility="collapsed")
     if st.button("Update"):
         update_data()
 with columns[1]:
