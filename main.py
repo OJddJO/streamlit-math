@@ -12,5 +12,5 @@ with columns[0]:
     if st.button("Update"):
         st.session_state.text = input
         with columns[1]:
-            st.session_state.text
+            st.latex(st.session_state.text)
 
