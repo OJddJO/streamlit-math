@@ -11,6 +11,7 @@ with columns[0]:
     input = st.text_area(label="Input", placeholder="Input", key="input", height=200, label_visibility="collapsed")
     if st.button("Update"):
         st.session_state.text = input
+        with columns[1]:
+            st.latex(st.session_state.text)
         st.experimental_rerun()
-with columns[1]:
-    st.latex(st.session_state.text)
+
