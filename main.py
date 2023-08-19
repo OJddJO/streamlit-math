@@ -1,29 +1,18 @@
 import streamlit as st
-import streamlit_elements as elements
 
 st.title("Math")
+st.set_page_config(page_title="Math", page_icon="🟰")
 
-st.session_state.layout = []
-st.session_state.text = []
+st.session_state.text = 'Hello World!'
 
-page = elements.elements("page")
+columns = st.columns(2)
 
-if st.button("Add a new box"):
-    with page:
-        # Add a new tab
-        st.session_state.layout.append(elements.dashboard.Item(i=f"Box {len(st.session_state.layout)+1}", x=len(st.session_state.layout)%2, y=len(st.session_state.layout)//2, w=1, h=1))
-        with elements.dashboard.Grid([st.session_state.layout[-1]]):
-            tabs = st.tabs(["Edit", "View"])
-            with tabs[0]:
-                st.session_state.text.append("")
-                def update_text(value):
-                    st.session_state.text[-1] = value
-                elements.editor.Monaco(
-                    height=200,
-                    value=st.session_state.text[-1],
-                    onChange=update_text,
-                )
-                elements.mui.Button("Update content", onClick=elements.sync())
-            with tabs[1]:
-                st.write(st.session_state.text[-1])
-        tabs = st.tabs(["View", "Edit"])
+with columns[0]:
+    st.header("Input")
+    st.text_area(label="Input", placeholder="Input", key="input", value=st.session_state.text, height=600, label_visibility="collapsed")
+    with st.button("Update"):
+        st.session_state.text = st.session_state.input
+        st.experimental_rerun()
+
+with columns[1]:
+    st.latex(st.session_state.text)
