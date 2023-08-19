@@ -8,8 +8,7 @@ st.session_state.text = 'Hello World!'
 columns = st.columns(2)
 
 with columns[0]:
-    st.header("Input")
-    input = st.text_area(label="Input", placeholder="Input", key="input", value=st.session_state.text, height=600, label_visibility="collapsed")
+    input = st.text_area(label="Input", placeholder="Input", key="input", value=st.session_state.text, height=200, label_visibility="collapsed")
     if st.button("Update"):
         st.session_state.text = input
         st.experimental_rerun()
