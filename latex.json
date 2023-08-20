@@ -46,5 +46,6 @@
     "lceil": "\\left\\lceil",
     "rceil": "\\right\\rceil",
     "lfloor": "\\left\\lfloor",
-    "rfloor": "\\right\\rfloor"
+    "rfloor": "\\right\\rfloor",
+    "to" : "\\to"
 }
