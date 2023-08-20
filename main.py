@@ -61,7 +61,7 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\int_{a}^{b}{x}$| _int(a)(b)(x)|
 | $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
 | $\prod_{a}^{b}{x}$| prod(a)(b)(x)|
-| $\lim_{x \to 2}{x}$| lim(a)(b)(x)|
+| $\lim_{x \to 2}{x}$| lim(x to 2)(x)|
 | $\frac{a}{b}$| frac(a)(b)|
 | $\sqrt{x}$| sqrt(x)  |
 | $\sqrt[n]{x}$| rt\[n\](x)|
