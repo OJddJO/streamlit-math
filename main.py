@@ -6,7 +6,7 @@ st.title("Math")
 
 st.session_state.text = ''
 
-st.sidebar.markdown("""| **Latex** | **Text** |
+st.sidebar.markdown(r"""| **Latex** | **Text** |
 |-----------|----------|
 | $\alpha$  | alpha    |
 |           |          |
