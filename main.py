@@ -60,8 +60,6 @@ with st.sidebar.expander("Help"):
 | $\rceil$  | rceil    |
 | $\lfloor$ | lfloor   |
 | $\rfloor$ | rfloor   |
-| $\left\|$(x)| labs    |
-| $(x)\right\|$| rabs   |
 | $\to$     | to       |
 | $\approx$ | approx   |
 | $\neq$    | neq      |
