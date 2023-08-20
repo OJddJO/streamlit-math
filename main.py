@@ -152,7 +152,7 @@ def evaluate_latex(text):
         else: #if not
             i += 1
             if i > len(text):
-                if text[0] == '\n':
+                if text[0:1] == '\n':
                     latex += '\\\\ '
                 else:
                     latex += text[0]
@@ -164,7 +164,6 @@ def update_text():
     st.session_state.text = input
     tmp = st.session_state.text
     tmp = evaluate_latex(tmp)
-    tmp
     with latex_container:
         st.latex(tmp)
 
@@ -172,4 +171,3 @@ with st.form(key="input_form"):
     input = st.text_area(label="Input", placeholder="Input", key="input", height=100, label_visibility="collapsed")
     if st.form_submit_button("Submit"):
         update_text()
-        input
