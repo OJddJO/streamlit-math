@@ -1,7 +1,9 @@
 import streamlit as st
 import json
+from PIL import Image
 
-st.set_page_config(page_title="Math", page_icon="🟰", layout="wide")
+icon = Image.open("icon.png")
+st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
 st.title("Math")
 
 st.markdown(
