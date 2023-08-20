@@ -27,7 +27,6 @@ st.session_state.text = ''
 
 st.sidebar.markdown(r"""| **Latex** | **Text** |
 |-----------|----------| #latex_func.json
-| $\text{text}$| text(text)|
 | $a^x$    | a^(x)    |
 | $a_x$    | a_(x)    |
 | $\int{x}$ | int(x)   |
@@ -42,6 +41,7 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\dot{x}$ | dot(x)   |
 | $\ddot{x}$| ddot(x)  |
 | $\vec{x}$ | vec(x)   |
+| $\text{text}$| text(text)|
 | $\widehat{x}$| widehat(x)|
 | $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
 | $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
