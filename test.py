@@ -1,12 +1,6 @@
-import streamlit as st
 import json
 
-st.set_page_config(page_title="Math", page_icon="🟰", layout="wide")
-st.title("Math")
-
-st.session_state.text = ''
-
-latex_container = st.container()
+test = "sqrt(_int(1)(3)(x^2))"
 
 def evaluate_latex(text):
     latex = ""
@@ -57,14 +51,4 @@ def evaluate_latex(text):
                 i = 0
     return latex
 
-def update_text():
-    st.session_state.text = input
-    tmp = st.session_state.text
-    tmp = evaluate_latex(tmp)
-    with latex_container:
-        st.latex(tmp)
-
-with st.form(key="input_form"):
-    input = st.text_area(label="Input", placeholder="Input", key="input", height=100, label_visibility="collapsed")
-    if st.form_submit_button("Submit"):
-        update_text()
+print(evaluate_latex(test))
