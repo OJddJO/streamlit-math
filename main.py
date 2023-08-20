@@ -55,8 +55,8 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\vec{x}$ | vec(x)   |
 | $\widehat{x}$| widehat(x)|
 | $\text{text}$| text(text)|
-| $\^x$     | ^(x)     |
-| $\_x$     | _(x)     |
+| $a\^x$    | a^(x)    |
+| $a\_x$    | a_(x)    |
 | $\int{x}$ | int(x)   |
 | $\int_{a}^{b}{x}$| _int(a)(b)(x)|
 | $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
