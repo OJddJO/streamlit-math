@@ -153,7 +153,7 @@ def evaluate_latex(text):
             i += 1
             if i > len(text):
                 if text.find("\n") == 0:
-                    latex += '\\\\ '
+                    latex += '\\\\\\\\ '
                 else:
                     latex += text[0]
                 text = text[1:]
