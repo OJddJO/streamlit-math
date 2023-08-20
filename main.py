@@ -8,7 +8,31 @@ st.session_state.text = ''
 
 st.sidebar.markdown(r"""| **Latex** | **Text** |
 |-----------|----------|
-| $\alpha$  | alpha    |
+| $\bar{x}$ | bar(x)   | #latex_func.json
+| $\dot{x}$ | dot(x)   |
+| $\ddot{x}$| ddot(x)  |
+| $\vec{x}$ | vec(x)   |
+| $\widehat{x}$| widehat(x)|
+| $\text{text}$| text(text)|
+| $a^x$    | a^(x)    |
+| $a_x$    | a_(x)    |
+| $\int{x}$ | int(x)   |
+| $\int_{a}^{b}{x}$| _int(a)(b)(x)|
+| $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
+| $\prod_{a}^{b}{x}$| prod(a)(b)(x)|
+| $\lim_{x \to 2}{x}$| lim(x to 2)(x)|
+| $\frac{a}{b}$| frac(a)(b)|
+| $\sqrt{x}$| sqrt(x)  |
+| $\sqrt[n]{x}$| rt\[n\](x)|
+| $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
+| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
+| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\\\ c & d)|
+| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$| Bmatrix(a & b \\\\ c & d)|
+| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$| vmatrix(a & b \\\\ c & d)|
+| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\\\ c & d)|
+| $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\\\ c & d)|
+| $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\\\ c & d)|
+| $\alpha$  | alpha    | #latex.json
 | $\beta$   | beta     |
 | $\gamma$  | gamma    |
 | $\delta$  | delta    |
@@ -49,30 +73,6 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\lfloor$ | lfloor   |
 | $\rfloor$ | rfloor   |
 | $\to$     | to       |
-| $\bar{x}$ | bar(x)   | #latex_func.json
-| $\dot{x}$ | dot(x)   |
-| $\ddot{x}$| ddot(x)  |
-| $\vec{x}$ | vec(x)   |
-| $\widehat{x}$| widehat(x)|
-| $\text{text}$| text(text)|
-| $a^x$    | a^(x)    |
-| $a_x$    | a_(x)    |
-| $\int{x}$ | int(x)   |
-| $\int_{a}^{b}{x}$| _int(a)(b)(x)|
-| $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
-| $\prod_{a}^{b}{x}$| prod(a)(b)(x)|
-| $\lim_{x \to 2}{x}$| lim(x to 2)(x)|
-| $\frac{a}{b}$| frac(a)(b)|
-| $\sqrt{x}$| sqrt(x)  |
-| $\sqrt[n]{x}$| rt\[n\](x)|
-| $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
-| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
-| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\\\ c & d)|
-| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$| Bmatrix(a & b \\\\ c & d)|
-| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$| vmatrix(a & b \\\\ c & d)|
-| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\\\ c & d)|
-| $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\\\ c & d)|
-| $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\\\ c & d)|
 """)
 
 latex_container = st.container()
