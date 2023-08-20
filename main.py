@@ -6,6 +6,13 @@ st.title("Math")
 
 st.session_state.text = ''
 
+st.sidebar.markdown("""| **Latex** | **Text** |
+|-----------|----------|
+| $\alpha$  | alpha    |
+|           |          |
+|           |          |
+""")
+
 latex_container = st.container()
 
 def evaluate_latex(text):
