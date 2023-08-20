@@ -15,6 +15,7 @@
     "lim": ["\\lim_{¤1}^{¤2}{¤3}", 3],
     "frac": ["\\frac{¤1}{¤2}", 2],
     "sqrt": ["\\sqrt{¤1}", 1],
+    "rt": ["\\sqrt[¤1]{¤2}", 2],
 
     "matrix": ["\\begin{matrix}¤1\\end{matrix}", 1],
     "pmatrix": ["\\begin{pmatrix}¤1\\end{pmatrix}", 1],
