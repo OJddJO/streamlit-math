@@ -47,8 +47,8 @@ def evaluate_latex(text):
         else: #if not
             i += 1
             if i > len(text):
-                if text.find("\n") == 0:
-                    latex += '\\\\ '
+                if text.find(" ") == 0:
+                    latex += '\\\\\\\\ '
                     text = text[1:]
                 else:
                     latex += text[0]
