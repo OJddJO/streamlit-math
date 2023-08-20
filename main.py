@@ -64,7 +64,7 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\neq$    | neq      |
 | $\Leftrightarrow$| equiv|
 | $\Rightarrow$| implies|
-| $\gesqlant$| gequal  |
+| $\geqslant$| gequal  |
 | $\leqslant$| lequal  |
 | $\in$     | in       |
 | $\notin$  | nin      |
