@@ -63,15 +63,15 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\lim_{a}^{b}{x}$| lim(a)(b)(x)|
 | $\frac{a}{b}$| frac(a)(b)|
 | $\sqrt{x}$| sqrt(x)  |
-| $\sqrt[n]{x}$| rt[n](x)|
-| $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\ c & d)|
-| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\ c & d)|
-| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\ c & d)|
-| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$| Bmatrix(a & b \\ c & d)|
-| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$| vmatrix(a & b \\ c & d)|
-| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\ c & d)|
-| $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\ c & d)|
-| $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\ c & d)|
+| $\sqrt[n]{x}$| rt\[n\](x)|
+| $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
+| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
+| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\\\ c & d)|
+| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$| Bmatrix(a & b \\\\ c & d)|
+| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$| vmatrix(a & b \\\\ c & d)|
+| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\\\ c & d)|
+| $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\\\ c & d)|
+| $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\\\ c & d)|
 """)
 
 latex_container = st.container()
