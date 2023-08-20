@@ -4,6 +4,25 @@ import json
 st.set_page_config(page_title="Math", page_icon="🟰", layout="wide")
 st.title("Math")
 
+st.markdown(
+    """
+    <style>
+        section[data-testid="stSidebar"] {
+            width: 320px !important;
+        }
+        .css-1i2wz1k {
+            width: 0 !important;
+            height: 0 !important;
+        }
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section.css-1cypcdb.eczjsme11 > div:nth-child(2) > div {
+            width: 0 !important;
+            height: 0 !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 st.session_state.text = ''
 
 st.sidebar.markdown(r"""| **Latex** | **Text** |
