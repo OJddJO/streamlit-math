@@ -14,6 +14,5 @@ def update_text():
 
 with columns[0]:
     input = st.text_area(label="Input", placeholder="Input", key="input", height=200, label_visibility="collapsed")
-    input.on_change(update_text)
     if st.button("Update"):
         update_text()
