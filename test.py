@@ -48,7 +48,7 @@ def evaluate_latex(text):
             i += 1
             if i > len(text):
                 if text[0] == '\n':
-                    latex += r'\\'
+                    latex += r'\\ '
                 else:
                     latex += text[0]
                 text = text[1:]
