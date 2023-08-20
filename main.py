@@ -162,7 +162,7 @@ def evaluate_latex(text):
 
 def update_text():
     st.session_state.text = input
-    tmp = fr'{input}'
+    tmp = repr(input)
     tmp = evaluate_latex(tmp)
     st.write(tmp)
     st.write(input)
