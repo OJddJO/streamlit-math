@@ -1,0 +1,26 @@
+{
+    "bar": "\\bar{¤}",
+    "dot": "\\dot{¤}",
+    "ddot": "\\ddot{¤}",
+    "vec": "\\vec{¤}",
+    "widehat": "\\widehat{¤}",
+
+    "text": "\\text{¤}",
+
+    "int": "\\int{¤}",
+    "int_": "\\int_{¤}^{¤}{¤}",
+    "sum": "\\sum_{¤}^{¤}{¤}",
+    "prod": "\\prod_{¤}^{¤}{¤}",
+    "lim": "\\lim_{¤}^{¤}{¤}",
+    "frac": "\\frac{¤}{¤}",
+    "sqrt": "\\sqrt{¤}",
+
+    "matrix": "\\begin{matrix}¤\\end{matrix}",
+    "pmatrix": "\\begin{pmatrix}¤\\end{pmatrix}",
+    "bmatrix": "\\begin{bmatrix}¤\\end{bmatrix}",
+    "Bmatrix": "\\begin{Bmatrix}¤\\end{Bmatrix}",
+    "vmatrix": "\\begin{vmatrix}¤\\end{vmatrix}",
+    "Vmatrix": "\\begin{Vmatrix}¤\\end{Vmatrix}",
+    "cases": "\\begin{cases}¤\\end{cases}",
+    "rcases": "\\begin{rcases}¤\\end{rcases}"
+}
