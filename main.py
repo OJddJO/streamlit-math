@@ -116,7 +116,7 @@ def evaluate_latex(text):
     while text != '':
         #check if text[:i] is in latex_dict
         if text[:i] in latex_func: #if it is
-            func = latex_func[text[:i]] #add latex to func
+            func = latex_func[text[:i]]+"    " #add latex to func
             latex += func[0]
             nb_args = func[1] #get number of args
             text = text[i:]
