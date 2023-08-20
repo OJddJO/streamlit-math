@@ -29,84 +29,84 @@ st.session_state.text = ''
 
 with st.expander("Help"):
     st.sidebar.markdown(r"""| **Latex** | **Text** |
-    |-----------|----------|
-    | $\text{text}$| text(text)| #latex_func.json
-    | $a^x$    | a^(x)    |
-    | $a_x$    | a_(x)    |
-    | $\int{x}$ | int(x)   |
-    | $\int_{a}^{b}{x}$| _int(a)(b)(x)|
-    | $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
-    | $\prod_{a}^{b}{x}$| prod(a)(b)(x)|
-    | $\lim_{x \to 2}{x}$| lim(x to 2)(x)|
-    | $\frac{a}{b}$| frac(a)(b)|
-    | $\sqrt{x}$| sqrt(x)  |
-    | $\sqrt[n]{x}$| rt\[n\](x)|
-    | $\bar{x}$ | bar(x)   |
-    | $\dot{x}$ | dot(x)   |
-    | $\ddot{x}$| ddot(x)  |
-    | $\vec{x}$ | vec(x)   |
-    | $\widehat{x}$| widehat(x)|
-    | $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
-    | $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
-    | $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\\\ c & d)|
-    | $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$| Bmatrix(a & b \\\\ c & d)|
-    | $\begin{vmatrix}a&b\\c&d\end{vmatrix}$| vmatrix(a & b \\\\ c & d)|
-    | $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\\\ c & d)|
-    | $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\\\ c & d)|
-    | $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\\\ c & d)|
-    | $\infty$  | infty    | #latex.json
-    | $\forall$ | forall   |
-    | $\lceil$  | lceil    |
-    | $\rceil$  | rceil    |
-    | $\lfloor$ | lfloor   |
-    | $\rfloor$ | rfloor   |
-    | $\left|$(x)| labs    |
-    | $(x)\right|$| rabs   |
-    | $\to$     | to       |
-    | $\approx$ | approx   |
-    | $\neq$    | neq      |
-    | $\Leftrightarrow$| equiv|
-    | $\Rightarrow$| implies|
-    | $\geqslant$| gequal  |
-    | $\leqslant$| lequal  |
-    | $\in$     | in       |
-    | $\notin$  | nin      |
-    | $\subset$ | subset   |
-    | $\alpha$  | alpha    |
-    | $\beta$   | beta     |
-    | $\gamma$  | gamma    |
-    | $\delta$  | delta    |
-    | $\epsilon$| epsilon  |
-    | $\zeta$   | zeta     |
-    | $\eta$    | eta      |
-    | $\theta$  | theta    |
-    | $\iota$   | iota     |
-    | $\kappa$  | kappa    |
-    | $\lambda$ | lambda   |
-    | $\mu$     | mu       |
-    | $\nu$     | nu       |
-    | $\xi$     | xi       |
-    | $\pi$     | pi       |
-    | $\rho$    | rho      |
-    | $\sigma$  | sigma    |
-    | $\tau$    | tau      |
-    | $\upsilon$| upsilon  |
-    | $\phi$    | phi      |
-    | $\chi$    | chi      |
-    | $\psi$    | psi      |
-    | $\omega$  | omega    |
-    | $\Gamma$  | Gamma    |
-    | $\Delta$  | Delta    |
-    | $\Theta$  | Theta    |
-    | $\Lambda$ | Lambda   |
-    | $\Xi$     | Xi       |
-    | $\Pi$     | Pi       |
-    | $\Sigma$  | Sigma    |
-    | $\Upsilon$| Upsilon  |
-    | $\Phi$    | Phi      |
-    | $\Psi$    | Psi      |
-    | $\Omega$  | Omega    |
-    """)
+|-----------|----------|
+| $\text{text}$| text(text)| #latex_func.json
+| $a^x$    | a^(x)    |
+| $a_x$    | a_(x)    |
+| $\int{x}$ | int(x)   |
+| $\int_{a}^{b}{x}$| _int(a)(b)(x)|
+| $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
+| $\prod_{a}^{b}{x}$| prod(a)(b)(x)|
+| $\lim_{x \to 2}{x}$| lim(x to 2)(x)|
+| $\frac{a}{b}$| frac(a)(b)|
+| $\sqrt{x}$| sqrt(x)  |
+| $\sqrt[n]{x}$| rt\[n\](x)|
+| $\bar{x}$ | bar(x)   |
+| $\dot{x}$ | dot(x)   |
+| $\ddot{x}$| ddot(x)  |
+| $\vec{x}$ | vec(x)   |
+| $\widehat{x}$| widehat(x)|
+| $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
+| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
+| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\\\ c & d)|
+| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$| Bmatrix(a & b \\\\ c & d)|
+| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$| vmatrix(a & b \\\\ c & d)|
+| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\\\ c & d)|
+| $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\\\ c & d)|
+| $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\\\ c & d)|
+| $\infty$  | infty    | #latex.json
+| $\forall$ | forall   |
+| $\lceil$  | lceil    |
+| $\rceil$  | rceil    |
+| $\lfloor$ | lfloor   |
+| $\rfloor$ | rfloor   |
+| $\left|$(x)| labs    |
+| $(x)\right|$| rabs   |
+| $\to$     | to       |
+| $\approx$ | approx   |
+| $\neq$    | neq      |
+| $\Leftrightarrow$| equiv|
+| $\Rightarrow$| implies|
+| $\geqslant$| gequal  |
+| $\leqslant$| lequal  |
+| $\in$     | in       |
+| $\notin$  | nin      |
+| $\subset$ | subset   |
+| $\alpha$  | alpha    |
+| $\beta$   | beta     |
+| $\gamma$  | gamma    |
+| $\delta$  | delta    |
+| $\epsilon$| epsilon  |
+| $\zeta$   | zeta     |
+| $\eta$    | eta      |
+| $\theta$  | theta    |
+| $\iota$   | iota     |
+| $\kappa$  | kappa    |
+| $\lambda$ | lambda   |
+| $\mu$     | mu       |
+| $\nu$     | nu       |
+| $\xi$     | xi       |
+| $\pi$     | pi       |
+| $\rho$    | rho      |
+| $\sigma$  | sigma    |
+| $\tau$    | tau      |
+| $\upsilon$| upsilon  |
+| $\phi$    | phi      |
+| $\chi$    | chi      |
+| $\psi$    | psi      |
+| $\omega$  | omega    |
+| $\Gamma$  | Gamma    |
+| $\Delta$  | Delta    |
+| $\Theta$  | Theta    |
+| $\Lambda$ | Lambda   |
+| $\Xi$     | Xi       |
+| $\Pi$     | Pi       |
+| $\Sigma$  | Sigma    |
+| $\Upsilon$| Upsilon  |
+| $\Phi$    | Phi      |
+| $\Psi$    | Psi      |
+| $\Omega$  | Omega    |
+""")
 
 latex_container = st.container()
 
