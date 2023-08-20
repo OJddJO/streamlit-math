@@ -113,6 +113,7 @@ def evaluate_latex(text):
     latex_dict = json.load(open("latex.json", "r"))
     latex_func = json.load(open("latex_func.json", "r"))
     i = 0
+    text = text[1:-1]
     while text != '':
         #check if text[:i] is in latex_dict
         if text[:i] in latex_func: #if it is
