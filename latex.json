@@ -1,3 +1,9 @@
 {
-    
+    "bar": "\\bar{¤}",
+    "dot": "\\dot{¤}",
+    "ddot": "\\ddot{¤}",
+    "vec": "\\vec{¤}",
+    "widehat": "\\widehat{¤}",
+
+    "sqrt": "\\sqrt{¤}"
 }
