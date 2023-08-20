@@ -164,6 +164,7 @@ def update_text():
     st.session_state.text = input
     tmp = st.session_state.text
     tmp = evaluate_latex(tmp)
+    tmp
     with latex_container:
         st.latex(tmp)
 
