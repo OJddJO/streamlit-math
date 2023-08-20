@@ -26,12 +26,7 @@ st.markdown(
 st.session_state.text = ''
 
 st.sidebar.markdown(r"""| **Latex** | **Text** |
-|-----------|----------|
-| $\bar{x}$ | bar(x)   | #latex_func.json
-| $\dot{x}$ | dot(x)   |
-| $\ddot{x}$| ddot(x)  |
-| $\vec{x}$ | vec(x)   |
-| $\widehat{x}$| widehat(x)|
+|-----------|----------|#latex_func.json
 | $\text{text}$| text(text)|
 | $a^x$    | a^(x)    |
 | $a_x$    | a_(x)    |
@@ -43,6 +38,11 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\frac{a}{b}$| frac(a)(b)|
 | $\sqrt{x}$| sqrt(x)  |
 | $\sqrt[n]{x}$| rt\[n\](x)|
+| $\bar{x}$ | bar(x)   | 
+| $\dot{x}$ | dot(x)   |
+| $\ddot{x}$| ddot(x)  |
+| $\vec{x}$ | vec(x)   |
+| $\widehat{x}$| widehat(x)|
 | $\begin{matrix}a&b\\c&d\end{matrix}$| matrix(a & b \\\\ c & d)|
 | $\begin{pmatrix}a&b\\c&d\end{pmatrix}$| pmatrix(a & b \\\\ c & d)|
 | $\begin{bmatrix}a&b\\c&d\end{bmatrix}$| bmatrix(a & b \\\\ c & d)|
