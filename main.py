@@ -52,7 +52,10 @@ def evaluate_latex(text):
         else: #if not
             i += 1
             if i > len(text):
-                latex += text[0]
+                if text[0] == '\n':
+                    latex += '\\\\'
+                else:
+                    latex += text[0]
                 text = text[1:]
                 i = 0
     return latex
