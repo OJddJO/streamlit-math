@@ -1,6 +1,7 @@
 import json
 
-test = "sqrt(_int(1)(3)(x^2))"
+test = """sqrt(_int(1)(3)(x^2))
+u = 2"""
 
 def evaluate_latex(text):
     latex = ""
@@ -46,7 +47,10 @@ def evaluate_latex(text):
         else: #if not
             i += 1
             if i > len(text):
-                latex += text[0]
+                if text[0] == '\n':
+                    latex += r'\\'
+                else:
+                    latex += text[0]
                 text = text[1:]
                 i = 0
     return latex
