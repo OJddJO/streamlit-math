@@ -13,6 +13,7 @@ def update_text():
         st.latex(st.session_state.text)
 
 with columns[0]:
-    input = st.text_area(label="Input", placeholder="Input", key="input", height=200, label_visibility="collapsed", on_change=update_text)
+    input = st.text_area(label="Input", placeholder="Input", key="input", height=200, label_visibility="collapsed")
+    input.on_change(update_text)
     if st.button("Update"):
         update_text()
