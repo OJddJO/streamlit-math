@@ -51,7 +51,14 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$| Vmatrix(a & b \\\\ c & d)|
 | $\begin{cases}a&b\\c&d\end{cases}$| cases(a & b \\\\ c & d)|
 | $\begin{rcases}a&b\\c&d\end{rcases}$| rcases(a & b \\\\ c & d)|
-| $\alpha$  | alpha    | #latex.json
+| $\infty$  | infty    | #latex.json
+| $\forall$ | forall   |
+| $\lceil$  | lceil    |
+| $\rceil$  | rceil    |
+| $\lfloor$ | lfloor   |
+| $\rfloor$ | rfloor   |
+| $\to$     | to       |
+| $\alpha$  | alpha    |
 | $\beta$   | beta     |
 | $\gamma$  | gamma    |
 | $\delta$  | delta    |
@@ -85,13 +92,6 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\Phi$    | Phi      |
 | $\Psi$    | Psi      |
 | $\Omega$  | Omega    |
-| $\infty$  | infty    |
-| $\forall$ | forall   |
-| $\lceil$  | lceil    |
-| $\rceil$  | rceil    |
-| $\lfloor$ | lfloor   |
-| $\rfloor$ | rfloor   |
-| $\to$     | to       |
 """)
 
 latex_container = st.container()
