@@ -47,5 +47,17 @@
     "rceil": "\\right\\rceil",
     "lfloor": "\\left\\lfloor",
     "rfloor": "\\right\\rfloor",
-    "to" : "\\to"
+    "labs": "\\left|",
+    "rabs": "\\right|",
+
+    "to" : "\\to",
+    "approx": "\\approx",
+    "neq": "\\neq",
+    "equiv": "\\Leftrightarrow",
+    "implies": "\\Rightarrow",
+    "gequal": "\\geqslant",
+    "lequal": "\\leqslant",
+    "in": "\\in",
+    "notin": "\\notin",
+    "subset": "\\subset"
 }

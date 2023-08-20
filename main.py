@@ -57,7 +57,18 @@ st.sidebar.markdown(r"""| **Latex** | **Text** |
 | $\rceil$  | rceil    |
 | $\lfloor$ | lfloor   |
 | $\rfloor$ | rfloor   |
+| $\left|$(x)| labs    |
+| $(x)\right|$| rabs   |
 | $\to$     | to       |
+| $\approx$ | approx   |
+| $\neq$    | neq      |
+| $\Leftrightarrow$| equiv|
+| $\Rightarrow$| implies|
+| $\gesqlant$| gequal  |
+| $\leqslant$| lequal  |
+| $\in$     | in       |
+| $\notin$  | nin      |
+| $\subset$ | subset   |
 | $\alpha$  | alpha    |
 | $\beta$   | beta     |
 | $\gamma$  | gamma    |
