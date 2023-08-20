@@ -33,7 +33,7 @@ with st.sidebar.expander("Help"):
 | $\text{text}$| text(text)| #latex_func.json
 | $a^x$    | a^(x)    |
 | $a_x$    | a_(x)    |
-| $\int{x}$ | int(x)   |
+| $\int{x}$ | bint(x)   |
 | $\int_{a}^{b}{x}$| _int(a)(b)(x)|
 | $\sum_{a}^{b}{x}$| sum(a)(b)(x)|
 | $\prod_{a}^{b}{x}$| prod(a)(b)(x)|
