@@ -5,15 +5,14 @@ st.title("Math")
 
 st.session_state.text = ''
 
-columns = st.columns(2)
+latex_container = st.container()
 
 def update_text():
     st.session_state.text = input
-    with columns[1]:
+    with latex_container:
         st.latex(st.session_state.text)
 
-with columns[0]:
-    with st.form(key="input_form"):
-        input = st.text_area(label="Input", placeholder="Input", key="input", height=200, label_visibility="collapsed")
-        if st.form_submit_button("Update"):
-            update_text()
+with st.form(key="input_form"):
+    input = st.text_area(label="Input", placeholder="Input", key="input", height=100, label_visibility="collapsed")
+    if st.form_submit_button("Update"):
+        update_text()
