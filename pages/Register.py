@@ -5,6 +5,9 @@ import deta
 import os
 
 #----------------------------------------------------------------------------------------------------------#
+conn = deta.Deta(os.environ["deta_key"])
+db = conn.Base("auth")
+
 def encodePassword(password):
     return sa.Hasher([password]).generate()[0]
 
