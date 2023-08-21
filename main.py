@@ -137,7 +137,6 @@ def evaluate_latex(text):
                         print(arg_list)
                     else:
                         i += 1
-                    print(i, text[i], nested, text)
                 end = False
                 text = text[i+1:]
                 i = 0
