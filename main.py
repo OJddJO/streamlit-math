@@ -28,7 +28,7 @@ st.markdown(
 st.session_state.text = ''
 
 with st.sidebar.expander("Help"):
-    st.markdown(r"""| **Latex** | **Text** |
+    st.markdown(r"""| **KaTeX** | **Text** |
 |-----------|----------|
 | $\text{text}$| text(text)| #latex_func.json
 | $a^x$    | a^(x)    |
