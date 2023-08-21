@@ -17,7 +17,7 @@ def insertUser(name, username, password):
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
-st.title("Login")
+st.title("Register")
 
 def regPage():
     # main
