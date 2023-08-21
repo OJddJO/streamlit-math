@@ -3,7 +3,6 @@ import streamlit-authenticator as sa
 import deta
 import os
 from PIL import Image
-from streamlit_extras.switch_page_button import switch_page
 
 #---------------------------------------------------------------------------------------------------------#
 conn = deta.Deta(os.environ["deta_key"])
