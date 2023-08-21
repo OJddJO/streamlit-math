@@ -9,12 +9,6 @@ from streamlit_extras.switch_page_button import switch_page
 conn = deta.Deta(os.environ["deta_key"])
 db = conn.Base("auth")
 
-def encodePassword(password):
-    return sa.Hasher([password]).generate()[0]
-
-def insertUser(name, username, password):
-    return db.put({"key": username, "name": name, "password": encodePassword(password), "save": []})
-
 def getUser(name):
     return db.get(name)
 
