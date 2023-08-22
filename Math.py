@@ -191,9 +191,8 @@ def not_logged_page():
 def logged_page():
     data = getUser(st.session_state.username)
     saved = data["save"]
-    tabs_name = [save[1] for save in saved].append("New page")
-    if tabs_name == None:
-        tabs_name = ["New page"]
+    tabs_name = [save[1] for save in saved]
+    tabs_name.append("New page")
     tabs = st.tabs(tabs_name)
     for i, save in enumerate(saved):
         st.session_state.text.append(save)
