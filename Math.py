@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 from PIL import Image
-from db import getUser
+from db import getUser, updateData
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
@@ -191,15 +191,23 @@ def not_logged_page():
 def logged_page():
     data = getUser(st.session_state.username)
     saved = data["save"]
-    tabs = st.tabs((save[1] for save in saved))
+    tabs = st.tabs((save[1] for save in saved)+("New page",))
     for i, save in enumerate(saved):
-        st.session_state.text.append(save[0])
+        st.session_state.text.append(save)
         with tabs[i]:
             st.session_state.latex_container.append(st.container())
             with st.form(key=f"input_form{i}"):
-                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed")
+                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=st.session_state.text[i][0])
                 if st.form_submit_button("Submit"):
                     update_text(i, input)
+                    updateData({"save": st.session_state.text}, st.session_state.username)
+    with tabs[-1]:
+        with st.form(key=f"input_form{len(saved)}"):
+            title = st.text_input(label="Title", placeholder="Title", key="title", label_visibility="collapsed")
+            if st.form_submit_button("Add new page"):
+                st.session_state.text.append(["", title])
+                updateData({"save": st.session_state.text}, st.session_state.username)
+                st.experimental_rerun()
 
 try:
     if st.session_state.authentication_status == True:

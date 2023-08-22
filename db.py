@@ -16,3 +16,6 @@ def fetchAllUsers():
 
 def insertUser(name, username, password):
     return db.put({"key": username, "name": name, "password": encodePassword(password), "save": []})
+
+def updateData(data, key):
+    return db.update(data, key)
