@@ -83,4 +83,4 @@ try:
         regPage()
 
 except Exception as e:
-    pass
+    regPage()
