@@ -8,6 +8,7 @@ def evaluate_latex(text):
     i = 0
     while text != '':
         #check if text[:i] is in latex_dict
+        print(text, i, latex)
         if text[:i] in latex_func: #if it is
             func = latex_func[text[:i]] #add latex to func
             latex += func[0]
@@ -39,6 +40,7 @@ def evaluate_latex(text):
         elif text[:i] in latex_dict: #if in latex_dict
             latex += latex_dict[text[:i]] #add latex
             text = text[i:] #remove from text
+            print(text)
         else: #if not
             i += 1
             if i > len(text):
