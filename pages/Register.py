@@ -10,6 +10,9 @@ db = conn.Base("auth")
 
 def encodePassword(password):
     return sa.Hasher([password]).generate()[0]
+    
+def fetchAllUsers():
+    return db.fetch().items
 
 def insertUser(name, username, password):
     return db.put({"key": username, "name": name, "password": encodePassword(password), "save": []})
