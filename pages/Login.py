@@ -17,7 +17,6 @@ def fetchAllUsers():
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
-st.title("Login")
 
 st.markdown(
     """
