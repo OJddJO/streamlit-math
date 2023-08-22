@@ -50,6 +50,8 @@
     "labs": "\\left|",
     "rabs": "\\right|",
 
+    "sin": "\\sin",
+    "cos": "\\cos",
     "to" : "\\to",
     "approx": "\\approx",
     "neq": "\\neq",

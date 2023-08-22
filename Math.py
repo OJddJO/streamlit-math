@@ -163,6 +163,7 @@ def evaluate_latex(text):
         elif text[:i] in latex_dict: #if in latex_dict
             latex += latex_dict[text[:i]] #add latex
             text = text[i:] #remove from text
+            i = 0
         else: #if not
             i += 1
             if i > len(text):
