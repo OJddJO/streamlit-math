@@ -20,6 +20,22 @@ st.markdown(
             width: 0 !important;
             height: 0 !important;
         }
+        .css-1oe5cao {
+            max-height: 100% !important;
+        }
+        .css-40ynm6 {
+            width: 0 !important;
+            height: 0 !important;
+        }
+        .css-912zdv {
+            width: 0 !important;
+            height: 0 !important;
+            display: none !important;
+        }
+        .css-1pxazr7 {
+            width: 0 !important;
+            height: 0 !important;
+        }
     </style>
     """,
     unsafe_allow_html=True,
