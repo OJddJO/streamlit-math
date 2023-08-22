@@ -19,6 +19,41 @@ icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
 st.title("Register")
 
+st.markdown(
+    """
+    <style>
+        section[data-testid="stSidebar"] {
+            width: 350px !important;
+        }
+        .css-1i2wz1k {
+            width: 0 !important;
+            height: 0 !important;
+        }
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section.css-1cypcdb.eczjsme11 > div:nth-child(2) > div {
+            width: 0 !important;
+            height: 0 !important;
+        }
+        .css-1oe5cao {
+            max-height: 100% !important;
+        }
+        .css-40ynm6 {
+            width: 0 !important;
+            height: 0 !important;
+        }
+        .css-912zdv {
+            width: 0 !important;
+            height: 0 !important;
+            display: none !important;
+        }
+        .css-1pxazr7 {
+            width: 0 !important;
+            height: 0 !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 def regPage():
     # main
     regContainer = st.form("register")
