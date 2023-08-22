@@ -57,8 +57,8 @@ st.markdown(
 def regPage():
     # main
     regContainer = st.form("register")
-    username = regContainer.text_input(lg.username, key="username")
-    password = regContainer.text_input(lg.password, type="password", key="password")
+    username = regContainer.text_input("Username", key="username")
+    password = regContainer.text_input("Password", type="password", key="password")
 
     # get all usernames to test if it already exists
     users = fetchAllUsers()
