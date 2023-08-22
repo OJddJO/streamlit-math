@@ -3,17 +3,7 @@ import streamlit_authenticator as sa
 import deta
 import os
 from PIL import Image
-
-#---------------------------------------------------------------------------------------------------------#
-conn = deta.Deta(os.environ["deta_key"])
-db = conn.Base("auth")
-
-def getUser(name):
-    return db.get(name)
-
-def fetchAllUsers():
-    return db.fetch().items
-#---------------------------------------------------------------------------------------------------------#
+from db import fetchAllUsers
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")

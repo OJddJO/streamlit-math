@@ -3,20 +3,7 @@ import streamlit_authenticator as sa
 from PIL import Image
 import deta
 import os
-
-#----------------------------------------------------------------------------------------------------------#
-conn = deta.Deta(os.environ["deta_key"])
-db = conn.Base("auth")
-
-def encodePassword(password):
-    return sa.Hasher([password]).generate()[0]
-    
-def fetchAllUsers():
-    return db.fetch().items
-
-def insertUser(name, username, password):
-    return db.put({"key": username, "name": name, "password": encodePassword(password), "save": []})
-#----------------------------------------------------------------------------------------------------------#
+from db import fetchAllUsers, insertUser
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")

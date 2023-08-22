@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 from PIL import Image
+from db import getUser
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
@@ -40,8 +41,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-st.session_state.text = ''
 
 with st.sidebar.expander("Help"):
     st.markdown(r"""| **KaTeX** | **Text** |
@@ -122,7 +121,9 @@ with st.sidebar.expander("Help"):
 | $\Omega$  | Omega    |
 """)
 
-latex_container = st.container()
+st.session_state.text = []
+
+st.session_state.latex_container = []
 
 def evaluate_latex(text):
     latex = ""
@@ -150,7 +151,6 @@ def evaluate_latex(text):
                     if nested == 0:
                         end = True
                         arg_list.append(evaluate_latex(text[1:i]))
-                        print(arg_list)
                     else:
                         i += 1
                 end = False
@@ -158,7 +158,6 @@ def evaluate_latex(text):
                 i = 0
                 nb_args -= 1
             for i, arg in enumerate(arg_list):
-                print(arg, i+1)
                 latex = latex.replace(f"¤{i+1}", arg)
             text = text[i:] #remove from text
         elif text[:i] in latex_dict: #if in latex_dict
@@ -175,14 +174,40 @@ def evaluate_latex(text):
                 i = 0
     return latex
 
-def update_text():
-    st.session_state.text = input
-    tmp = st.session_state.text
+def update_text(page, text):
+    st.session_state.text[page] = text
+    tmp = text
     tmp = evaluate_latex(tmp)
-    with latex_container:
+    with st.session_state.latex_container[page]:
         st.latex(tmp)
 
-with st.form(key="input_form"):
-    input = st.text_area(label="Input", placeholder="Input", key="input", height=100, label_visibility="collapsed")
-    if st.form_submit_button("Submit"):
-        update_text()
+def not_logged_page():
+    with st.form(key="input_form"):
+        input = st.text_area(label="Input", placeholder="Input", key="input", height=100, label_visibility="collapsed")
+        if st.form_submit_button("Submit"):
+            update_text(0, input)
+    st.info("If you want to save your work, please login")
+
+def logged_page():
+    data = getUser(st.session_state.username)
+    saved = data["save"]
+    tabs = st.tabs((save[1] for save in saved))
+    for i, save in enumerate(saved):
+        st.session_state.text.append(save[0])
+        with tabs[i]:
+            st.session_state.latex_container.append(st.container())
+            with st.form(key=f"input_form{i}"):
+                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed")
+                if st.form_submit_button("Submit"):
+                    update_text(i, input)
+
+try:
+    if st.session_state.authentication_status == True:
+        logged_page()
+        st.session_state.authenticator.logout("Logout", "sidebar")
+
+    if st.session_state.authentication_status == None or st.session_state.authentication_status == False:
+        not_logged_page()
+
+except Exception as e:
+    not_logged_page()
