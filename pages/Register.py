@@ -59,7 +59,7 @@ st.markdown(
 def regPage():
     # main
     regContainer = st.form("register")
-    regContainer.header("Register")
+    regContainer.subheader("Register")
     username = regContainer.text_input("Username", key="username")
     password = regContainer.text_input("Password", type="password", key="password")
 
