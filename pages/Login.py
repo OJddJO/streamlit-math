@@ -1,7 +1,5 @@
 import streamlit as st
 import streamlit_authenticator as sa
-import deta
-import os
 from PIL import Image
 from db import fetchAllUsers
 

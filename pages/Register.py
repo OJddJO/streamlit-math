@@ -1,8 +1,6 @@
 import streamlit as st
 import streamlit_authenticator as sa
 from PIL import Image
-import deta
-import os
 from db import fetchAllUsers, insertUser
 
 icon = Image.open("icon.png")
