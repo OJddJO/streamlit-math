@@ -203,7 +203,7 @@ def logged_page():
                 if st.form_submit_button("Submit"):
                     st.session_state.text[i][0] = update_text(i, input)
                     updateData({"save": st.session_state.text}, st.session_state.username)
-            if st.button("Delete page"):
+            if st.button("Delete page", key=f"delete{i}"):
                 st.session_state.text.pop(i)
                 updateData({"save": st.session_state.text}, st.session_state.username)
                 st.experimental_rerun()
