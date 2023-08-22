@@ -59,7 +59,7 @@
     "implies": "\\Rightarrow",
     "gequal": "\\geqslant",
     "lequal": "\\leqslant",
-    "_in": "\\in",
+    "in_": "\\in",
     "notin": "\\notin",
     "subset": "\\subset"
 }
