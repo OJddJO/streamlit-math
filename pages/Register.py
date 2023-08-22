@@ -20,7 +20,6 @@ def insertUser(name, username, password):
 
 icon = Image.open("icon.png")
 st.set_page_config(page_title="Math", page_icon=icon, layout="wide", initial_sidebar_state="expanded")
-st.title("Register")
 
 st.markdown(
     """
@@ -60,6 +59,7 @@ st.markdown(
 def regPage():
     # main
     regContainer = st.form("register")
+    regContainer.header("Register")
     username = regContainer.text_input("Username", key="username")
     password = regContainer.text_input("Password", type="password", key="password")
 
