@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit-authenticator as sa
+import streamlit_authenticator as sa
 import deta
 import os
 from PIL import Image
