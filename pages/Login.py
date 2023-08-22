@@ -66,7 +66,7 @@ st.session_state.name, authenticationStatus, username = st.session_state.authent
 if authenticationStatus == False:
     st.error("Username/Password incorrect")
 if authenticationStatus == None:
-    st.warning()
+    st.warning("Please enter your username and password")
 if authenticationStatus == True:
     st.success(f"Logged in as {st.session_state.name}")
     st.session_state.authenticator.logout(lg.logout, "sidebar")
