@@ -64,7 +64,7 @@ def regPage():
     users = fetchAllUsers()
     usernames = [user["key"] for user in users]
 
-    if regContainer.form_submit_button("Register"):
+    if regContainer.form_submit_button("Submit"):
         name = username
         if username == "" or password == "":
             st.error("Please fill all the fields")
