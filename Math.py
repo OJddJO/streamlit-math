@@ -181,6 +181,7 @@ def update_text(page, text):
         st.latex(latex)
 
 def not_logged_page():
+    st.session_state.latex_container.append(st.container())
     with st.form(key="input_form"):
         input = st.text_area(label="Input", placeholder="Input", key="input", height=100, label_visibility="collapsed")
         if st.form_submit_button("Submit"):
