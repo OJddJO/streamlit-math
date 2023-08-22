@@ -52,7 +52,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-# authentication
+
 get_users = fetchAllUsers()
 users = [user["key"] for user in get_users]
 names = [user["name"] for user in get_users]
