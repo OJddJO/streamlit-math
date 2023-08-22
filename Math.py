@@ -175,11 +175,11 @@ def evaluate_latex(text):
     return latex
 
 def update_text(page, text):
-    st.session_state.text[page] = text
-    tmp = text
-    tmp = evaluate_latex(tmp)
+    latex = text
+    latex = evaluate_latex(latex)
     with st.session_state.latex_container[page]:
-        st.latex(tmp)
+        st.latex(latex)
+    return latex
 
 def not_logged_page():
     with st.form(key="input_form"):
@@ -201,7 +201,7 @@ def logged_page():
             with st.form(key=f"input_form{i}"):
                 input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=st.session_state.text[i][0])
                 if st.form_submit_button("Submit"):
-                    update_text(i, input)
+                    st.session_state.text[i][0] = update_text(i, input)
                     updateData({"save": st.session_state.text}, st.session_state.username)
     with tabs[-1]:
         with st.form(key=f"input_form{len(saved)}"):
