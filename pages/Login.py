@@ -67,4 +67,4 @@ if authenticationStatus == None:
     st.warning("Please enter your username and password")
 if authenticationStatus == True:
     st.success(f"Logged in as {st.session_state.name}")
-    st.session_state.authenticator.logout(lg.logout, "sidebar")
+    st.session_state.authenticator.logout("Logout", "sidebar")
