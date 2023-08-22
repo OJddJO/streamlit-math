@@ -75,10 +75,12 @@ def regPage():
             insertUser(name, username, password)
 
 try:
+    if st.session_state.authentication_status == True:
+        st.error("You are already logged in")
+        st.session_state.authenticator.logout("Logout", "sidebar")
+
     if st.session_state.authentication_status == None or st.session_state.authentication_status == False:
         regPage()
-    else:
-        st.success("You are already logged in !")
 
 except Exception as e:
     pass
