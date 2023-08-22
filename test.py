@@ -1,7 +1,5 @@
 import json
-
-test = """sqrt(Int(1)(3)(x^2))
-u = 2"""
+test = "int(frac(cos(x))(sin(x)))"
 
 def evaluate_latex(text):
     latex = ""
@@ -29,16 +27,13 @@ def evaluate_latex(text):
                     if nested == 0:
                         end = True
                         arg_list.append(evaluate_latex(text[1:i]))
-                        print(arg_list)
                     else:
                         i += 1
-                    print(i, text[i], nested, text)
                 end = False
                 text = text[i+1:]
                 i = 0
                 nb_args -= 1
             for i, arg in enumerate(arg_list):
-                print(arg, i+1)
                 latex = latex.replace(f"¤{i+1}", arg)
             text = text[i:] #remove from text
         elif text[:i] in latex_dict: #if in latex_dict
@@ -47,12 +42,11 @@ def evaluate_latex(text):
         else: #if not
             i += 1
             if i > len(text):
-                if text.find(" ") == 0:
-                    latex += '\\\\\\\\ '
-                    text = text[1:]
+                if text.find("\n") == 0:
+                    latex += '\\\\ '
                 else:
                     latex += text[0]
-                    text = text[1:]
+                text = text[1:]
                 i = 0
     return latex
 
