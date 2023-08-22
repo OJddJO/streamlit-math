@@ -61,7 +61,7 @@ def regPage():
     password = regContainer.text_input(lg.password, type="password", key="password")
 
     # get all usernames to test if it already exists
-    users = auth.fetchAllUsers()
+    users = fetchAllUsers()
     usernames = [user["key"] for user in users]
 
     if regContainer.form_submit_button(lg.register):
