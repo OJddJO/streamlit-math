@@ -55,7 +55,7 @@ st.markdown(
 )
 
 # authentication
-get_users = auth.fetchAllUsers()
+get_users = fetchAllUsers()
 users = [user["key"] for user in get_users]
 names = [user["name"] for user in get_users]
 passwords = [user["password"] for user in get_users]
