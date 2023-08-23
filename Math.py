@@ -233,6 +233,7 @@ def logged_page():
 
 try:
     if st.session_state.authentication_status == True:
+        st.info("Save system broken")
         logged_page()
         st.session_state.authenticator.logout("Logout", "sidebar")
 
