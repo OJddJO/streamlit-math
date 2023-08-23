@@ -224,10 +224,13 @@ def logged_page():
                 st.experimental_rerun()
     st.write(st.session_state.text)
 
-#try:
+try:
     if st.session_state.authentication_status == True:
         logged_page()
         st.session_state.authenticator.logout("Logout", "sidebar")
 
     if st.session_state.authentication_status == None or st.session_state.authentication_status == False:
         not_logged_page()
+
+except Exception as e:
+    not_logged_page()
