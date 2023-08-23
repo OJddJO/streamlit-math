@@ -190,6 +190,13 @@ def not_logged_page():
             update_text(0, input)
     st.info("If you want to save your work, please login")
 
+def save_data(name, text):
+    if type(name) != list:
+        name = [name, ]
+    if type(text) != list:
+        text = [text, ]
+    updateData({"save_data": text, "save_name": name}, st.session_state.username)
+
 def logged_page():
     data = getUser(st.session_state.username)
     save_data = data['save_data']
@@ -204,12 +211,11 @@ def logged_page():
                 input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=save_data[i])
                 if st.form_submit_button("Submit"):
                     update_text(i, input)
-                    save_data[i] = input
-                    updateData({"save_data": list(save_data)}, st.session_state.username)
+                    save_data(save_name, save_data)
             if st.button("Delete page", key=f"delete{i}"):
                 save_data = save_data.pop(i)
                 save_name = save_name.pop(i)
-                updateData({"save_data": list(save_data), "save_name": list(save_name)}, st.session_state.username)
+                save_data(save_name, save_data)
                 st.experimental_rerun()
     with tabs[-1]:
         with st.form(key=f"input_form{len(save_data)}"):
@@ -217,7 +223,7 @@ def logged_page():
             if st.form_submit_button("Add new page"):
                 save_data.append("x")
                 save_name.append(title)
-                updateData({"save_data": list(save_data), "save_name": list(save_name)}, st.session_state.username)
+                save_data(save_name, save_data)
                 st.experimental_rerun()
     st.write(st.session_state.text)
 
