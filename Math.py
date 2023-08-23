@@ -209,6 +209,7 @@ def logged_page():
             if st.button("Delete page", key=f"delete{i}"):
                 tmp = st.session_state.text
                 tmp = tmp.pop(i)
+                tmp = list(tmp)
                 st.session_state.text = tmp
                 updateData({"save": st.session_state.text}, st.session_state.username)
     with tabs[-1]:
