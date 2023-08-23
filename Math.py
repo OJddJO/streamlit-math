@@ -192,36 +192,32 @@ def not_logged_page():
 
 def logged_page():
     data = getUser(st.session_state.username)
-    saved = data['save']
-    tabs_name = [save['name'] for save in saved]
+    save_data = data['save_data']
+    save_name = data['save_name']
+    tabs_name = save_name
     tabs_name.append("New page")
     tabs = st.tabs(tabs_name)
-    for i, save in enumerate(saved):
-        st.session_state.text.append(save)
+    for i, save in enumerate(save_data):
         with tabs[i]:
             st.session_state.latex_container.append(st.container())
             with st.form(key=f"input_form{i}"):
-                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=st.session_state.text[i]['text'])
+                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=save_data[i])
                 if st.form_submit_button("Submit"):
                     update_text(i, input)
-                    st.session_state.text[i]['text'] = input
-                    updateData({"save": st.session_state.text}, st.session_state.username)
+                    save_data[i] = input
+                    updateData({"save_data": save_data}, st.session_state.username)
             if st.button("Delete page", key=f"delete{i}"):
-                tmp = st.session_state.text
-                tmp = tmp.pop(i)
-                st.session_state.text = tmp
-                updateData({"save": tmp}, st.session_state.username)
+                save_data = save_data.pop(i)
+                save_name = save_name.pop(i)
+                updateData({"save_data": save_data, "save_name": save_name}, st.session_state.username)
+                st.experimental_rerun()
     with tabs[-1]:
         with st.form(key=f"input_form{len(saved)}"):
             title = st.text_input(label="Title", placeholder="Title", key="title", label_visibility="collapsed")
             if st.form_submit_button("Add new page"):
-                st.session_state.text.append(
-                    {
-                        'text': "", 
-                        'name': title
-                    }
-                )
-                updateData({"save": st.session_state.text}, st.session_state.username)
+                save_data.append("x")
+                save_name.append(title)
+                updateData({"save_data": save_data, "save_name": save_name}, st.session_state.username)
                 st.experimental_rerun()
     st.write(st.session_state.text)
 
