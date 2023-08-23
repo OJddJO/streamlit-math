@@ -205,11 +205,11 @@ def logged_page():
                 if st.form_submit_button("Submit"):
                     update_text(i, input)
                     save_data[i] = input
-                    updateData({"save_data": save_data}, st.session_state.username)
+                    updateData({"save_data": list(save_data)}, st.session_state.username)
             if st.button("Delete page", key=f"delete{i}"):
                 save_data = save_data.pop(i)
                 save_name = save_name.pop(i)
-                updateData({"save_data": save_data, "save_name": save_name}, st.session_state.username)
+                updateData({"save_data": list(save_data), "save_name": list(save_name)}, st.session_state.username)
                 st.experimental_rerun()
     with tabs[-1]:
         with st.form(key=f"input_form{len(save_data)}"):
@@ -217,7 +217,7 @@ def logged_page():
             if st.form_submit_button("Add new page"):
                 save_data.append("x")
                 save_name.append(title)
-                updateData({"save_data": save_data, "save_name": save_name}, st.session_state.username)
+                updateData({"save_data": list(save_data), "save_name": list(save_name)}, st.session_state.username)
                 st.experimental_rerun()
     st.write(st.session_state.text)
 
