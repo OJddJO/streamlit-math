@@ -191,9 +191,13 @@ def not_logged_page():
     st.info("If you want to save your work, please login")
 
 def save_to_db(name, text):
-    if type(name) != list:
+    if name == None:
+        name = []
+    elif type(name) != list:
         name = [name, ]
-    if type(text) != list:
+    if text == None:
+        text = []
+    elif type(text) != list:
         text = [text, ]
     updateData({"save_data": text, "save_name": name}, st.session_state.username)
 
