@@ -120,6 +120,7 @@ with st.sidebar.expander("Help"):
 | $\Psi$    | Psi      |
 | $\Omega$  | Omega    |
 """)
+st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
 
 st.session_state.text = []
 
@@ -234,5 +235,3 @@ try:
 
 except Exception as e:
     not_logged_page()
-
-st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
