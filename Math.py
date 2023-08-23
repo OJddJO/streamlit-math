@@ -207,8 +207,8 @@ def logged_page():
                     updateData({"save": st.session_state.text}, st.session_state.username)
             if st.button("Delete page", key=f"delete{i}"):
                 st.session_state.text = st.session_state.text.pop(i)
+                st.write(st.session_state.text)
                 updateData({"save": st.session_state.text}, st.session_state.username)
-                st.experimental_rerun()
     with tabs[-1]:
         with st.form(key=f"input_form{len(saved)}"):
             title = st.text_input(label="Title", placeholder="Title", key="title", label_visibility="collapsed")
