@@ -151,7 +151,6 @@ def evaluate_latex(text):
                     if nested == 0:
                         end = True
                         arg_list.append(evaluate_latex(text[1:i]))
-                        i = 0
                     else:
                         i += 1
                 end = False
@@ -160,6 +159,7 @@ def evaluate_latex(text):
                 nb_args -= 1
             for i, arg in enumerate(arg_list):
                 latex = latex.replace(f"¤{i+1}", arg)
+            i = 0 
             text = text[i:] #remove from text
         elif text[:i] in latex_dict: #if in latex_dict
             latex += latex_dict[text[:i]] #add latex
