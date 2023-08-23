@@ -151,7 +151,7 @@ def evaluate_latex(text):
                     if nested == 0:
                         end = True
                         arg_list.append(evaluate_latex(text[1:i]))
-                        i += 1
+                        i = 0
                     else:
                         i += 1
                 end = False
