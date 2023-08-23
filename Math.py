@@ -225,7 +225,6 @@ def logged_page():
                 save_name.append(title)
                 save_to_db(save_name, save_data)
                 st.experimental_rerun()
-    st.write(st.session_state.text)
 
 try:
     if st.session_state.authentication_status == True:
