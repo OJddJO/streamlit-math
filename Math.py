@@ -201,7 +201,7 @@ def logged_page():
         with tabs[i]:
             st.session_state.latex_container.append(st.container())
             with st.form(key=f"input_form{i}"):
-                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=st.session_state.text[i][0])
+                input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=st.session_state.text[i]['text'])
                 if st.form_submit_button("Submit"):
                     update_text(i, input)
                     st.session_state.text[i]['text'] = input
