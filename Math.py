@@ -151,10 +151,11 @@ def evaluate_latex(text):
                     if nested == 0:
                         end = True
                         arg_list.append(evaluate_latex(text[1:i]))
+                        i += 1
                     else:
                         i += 1
                 end = False
-                text = text[i+1:]
+                text = text[i:]
                 i = 0
                 nb_args -= 1
             for i, arg in enumerate(arg_list):
