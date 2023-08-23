@@ -211,6 +211,7 @@ def logged_page():
                 tmp = tmp.pop(i)
                 tmp = list(tmp)
                 st.session_state.text = tmp
+                print(st.session_state.text)
                 updateData({"save": st.session_state.text}, st.session_state.username)
     with tabs[-1]:
         with st.form(key=f"input_form{len(saved)}"):
