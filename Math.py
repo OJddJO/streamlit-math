@@ -191,8 +191,8 @@ def not_logged_page():
 
 def logged_page():
     data = getUser(st.session_state.username)
-    saved = data["save"]
-    tabs_name = [save[1] for save in saved]
+    saved = data['save']
+    tabs_name = [save['name'] for save in saved]
     tabs_name.append("New page")
     tabs = st.tabs(tabs_name)
     for i, save in enumerate(saved):
@@ -203,7 +203,7 @@ def logged_page():
                 input = st.text_area(label="Input", placeholder="Input", key=f"input{i}", height=100, label_visibility="collapsed", value=st.session_state.text[i][0])
                 if st.form_submit_button("Submit"):
                     update_text(i, input)
-                    st.session_state.text[i][0] = input
+                    st.session_state.text[i]['text'] = input
                     updateData({"save": st.session_state.text}, st.session_state.username)
             if st.button("Delete page", key=f"delete{i}"):
                 tmp = st.session_state.text
@@ -214,7 +214,12 @@ def logged_page():
         with st.form(key=f"input_form{len(saved)}"):
             title = st.text_input(label="Title", placeholder="Title", key="title", label_visibility="collapsed")
             if st.form_submit_button("Add new page"):
-                st.session_state.text.append(["", title])
+                st.session_state.text.append(
+                    {
+                        'text': "", 
+                        'name': title
+                    }
+                )
                 updateData({"save": st.session_state.text}, st.session_state.username)
                 st.experimental_rerun()
     st.write(st.session_state.text)
