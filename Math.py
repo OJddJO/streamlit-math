@@ -82,7 +82,7 @@ with st.sidebar.expander("Help"):
 | $\Rightarrow$| implies|
 | $\geqslant$| gequal  |
 | $\leqslant$| lequal  |
-| $\in$     | in       |
+| $\in$     | in_      |
 | $\notin$  | nin      |
 | $\subset$ | subset   |
 | $\alpha$  | alpha    |
