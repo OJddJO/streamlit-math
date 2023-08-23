@@ -58,5 +58,3 @@ if authenticationStatus == None:
 if authenticationStatus == True:
     st.success(f"Logged in as {st.session_state.name}")
     st.session_state.authenticator.logout("Logout", "sidebar")
-
-st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
