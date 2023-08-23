@@ -234,3 +234,5 @@ try:
 
 except Exception as e:
     not_logged_page()
+
+st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
