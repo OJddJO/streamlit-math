@@ -190,7 +190,6 @@ def not_logged_page():
     st.info("If you want to save your work, please login")
 
 def logged_page():
-    st.write(st.session_state.text)
     data = getUser(st.session_state.username)
     saved = data["save"]
     tabs_name = [save[1] for save in saved]
@@ -217,6 +216,7 @@ def logged_page():
                 st.session_state.text.append(["", title])
                 updateData({"save": st.session_state.text}, st.session_state.username)
                 st.experimental_rerun()
+    st.write(st.session_state.text)
 
 try:
     if st.session_state.authentication_status == True:
