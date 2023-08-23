@@ -219,6 +219,7 @@ def logged_page():
             if st.button("Delete page", key=f"delete{i}"):
                 save_data = save_data.pop(i)
                 save_name = save_name.pop(i)
+                st.write(save_data)
                 save_to_db(save_name, save_data)
                 st.experimental_rerun()
     with tabs[-1]:
