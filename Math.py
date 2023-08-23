@@ -236,4 +236,3 @@ try:
 
 except Exception as e:
     not_logged_page()
-    st.write(e)
