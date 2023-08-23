@@ -194,7 +194,7 @@ def logged_page():
     data = getUser(st.session_state.username)
     save_data = data['save_data']
     save_name = data['save_name']
-    tabs_name = save_name
+    tabs_name = save_name.copy()
     tabs_name.append("New page")
     tabs = st.tabs(tabs_name)
     for i, save in enumerate(save_data):
