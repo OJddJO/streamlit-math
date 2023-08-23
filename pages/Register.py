@@ -41,6 +41,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
+
 def regPage():
     # main
     regContainer = st.form("register")
