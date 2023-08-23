@@ -212,7 +212,7 @@ def logged_page():
                 updateData({"save_data": save_data, "save_name": save_name}, st.session_state.username)
                 st.experimental_rerun()
     with tabs[-1]:
-        with st.form(key=f"input_form{len(saved)}"):
+        with st.form(key=f"input_form{len(save_data)}"):
             title = st.text_input(label="Title", placeholder="Title", key="title", label_visibility="collapsed")
             if st.form_submit_button("Add new page"):
                 save_data.append("x")
