@@ -190,6 +190,7 @@ def not_logged_page():
     st.info("If you want to save your work, please login")
 
 def logged_page():
+    st.write(st.session_state.text)
     data = getUser(st.session_state.username)
     saved = data["save"]
     tabs_name = [save[1] for save in saved]
