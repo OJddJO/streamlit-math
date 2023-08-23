@@ -74,5 +74,3 @@ try:
 
 except Exception as e:
     regPage()
-    
-st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
