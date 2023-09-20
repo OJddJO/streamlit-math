@@ -55,7 +55,7 @@ with st.sidebar.expander("Help"):
 | $\lim_{x \to 2}{x}$| lim(x to 2)(x)|
 | $\frac{a}{b}$| frac(a)(b)|
 | $\sqrt{x}$| sqrt(x)  |
-| $\sqrt[n]{x}$| rt\[n\](x)|
+| $\sqrt[n]{x}$| rt(n)(x)|
 | $\bar{x}$ | bar(x)   |
 | $\dot{x}$ | dot(x)   |
 | $\ddot{x}$| ddot(x)  |

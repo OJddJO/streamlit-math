@@ -1,6 +1,4 @@
-import json
-test = """Int(a)(b)(x)
-u = 3 + x"""
+test = """rt(3)(frac(a)(b))"""
 
 latex_dict = {
     "alpha": "\\alpha",
@@ -121,16 +119,15 @@ def evaluate_latex(text):
                     if nested == 0:
                         end = True
                         arg_list.append(evaluate_latex(text[1:i]))
-                    else:
-                        i += 1
+                    i += 1
                 end = False
-                text = text[i+1:]
+                text = text[i:]
                 i = 0
                 nb_args -= 1
             for i, arg in enumerate(arg_list):
                 latex = latex.replace(f"¤{i+1}", arg)
+            i = 0 
             text = text[i:] #remove from text
-            i = 0
         elif text[:i] in latex_dict: #if in latex_dict
             latex += latex_dict[text[:i]] #add latex
             text = text[i:] #remove from text
