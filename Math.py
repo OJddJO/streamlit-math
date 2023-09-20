@@ -85,6 +85,11 @@ with st.sidebar.expander("Help"):
 | $\in$     | in_      |
 | $\notin$  | nin      |
 | $\subset$ | subset   |
+| $\char{2115}| natural|
+| $\char{2124}| integer|
+| $\char{211A}| rational|
+| $\char{211D}| real   |
+| $\char{2102}| complex|
 | $\alpha$  | alpha    |
 | $\beta$   | beta     |
 | $\gamma$  | gamma    |
