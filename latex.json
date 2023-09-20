@@ -37,11 +37,11 @@
     "infty": "\\infty",
     "forall": "\\forall",
 
-    "natural": "\\char{2115}",
-    "integer": "\\char{2124}",
-    "rational": "\\char{211A}",
-    "real": "\\char{211D}",
-    "complex": "\\char{2102}",
+    "natural": "\\char\"2115",
+    "integer": "\\char\"2124",
+    "rational": "\\char\"211A",
+    "real": "\\char\"211D",
+    "complex": "\\char\"2102",
 
     "(": "\\left(",
     ")": "\\right)",
