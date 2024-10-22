@@ -26,5 +26,5 @@
     "Vmatrix": ["\\begin{Vmatrix}¤1\\end{Vmatrix}", 1],
     "cases": ["\\begin{cases}¤1\\end{cases}", 1],
     "rcases": ["\\begin{rcases}¤1\\end{rcases}", 1],
-    "equation": ["\\begin{equation}¤1\\end{equation}", 1]
+    "align": ["\\begin{aligned}¤1\\end{aligned}", 1]
 }

@@ -82,7 +82,7 @@ with st.sidebar.expander("Structures"):
     st.markdown(
 r"""| **KaTeX** | **Text** |
 |----------------------------------------|--------------------------------------|
-| $\begin{aligned}a&=b+c \\ a-c&=b\end{aligned}$| equation(a &= b \\ a-c &= b)      |
+| $\begin{aligned}a&=b+c \\ a-c&=b\end{aligned}$| align(a &= b \\ a-c &= b)      |
 | $\begin{matrix}a&b\\c&d\end{matrix}$   | matrix(a & b \\ c & d)               |
 | $\begin{cases}a&b\\c&d\end{cases}$     | cases(a & b \\ c & d)                |
 | $\begin{rcases}a&b\\c&d\end{rcases}$   | rcases(a & b \\ c & d)               |
