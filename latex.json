@@ -35,6 +35,8 @@
     "Psi": "\\Psi",
     "Omega": "\\Omega",
 
+    ",": ", ",
+
     "inf": "\\infty",
     "forall": "\\forall",
     "exists": "\\exists",
