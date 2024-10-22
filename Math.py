@@ -222,5 +222,5 @@ with st.form(key="input_form"):
     col1, col2 = st.columns(2)
     if col1.form_submit_button("Submit"):
         update_text(input)
-    if col2.button("Clear"):
+    if col2.form_submit_button("Clear"):
         st.session_state.text = ""
