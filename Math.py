@@ -156,7 +156,7 @@ def evaluate_latex(text):
                         nested -= 1
                     if nested == 0:
                         end = True
-                        if latex_func[-1] == "text":
+                        if func[0] == "\\text{¤1}":
                             arg_list.append(text[1:i])
                         else:
                             arg_list.append(evaluate_latex(text[1:i]))
