@@ -82,15 +82,15 @@ with st.sidebar.expander("Structures"):
     st.markdown(
 r"""| **KaTeX** | **Text** |
 |----------------------------------------|--------------------------------------|
-| $\begin{equation}\begin{split}a&=b+c \\ &=b\end{split}\end{equation}$    | equation(a &= b \\ &= b)                      |
-| $\begin{matrix}a&b\\c&d\end{matrix}$   | matrix(a & b \\ c & d)             |
-| $\begin{cases}a&b\\c&d\end{cases}$     | cases(a & b \\ c & d)              |
-| $\begin{rcases}a&b\\c&d\end{rcases}$   | rcases(a & b \\ c & d)             |
-| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ | pmatrix(a & b \\ c & d)            |
-| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$ | bmatrix(a & b \\ c & d)            |
-| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$ | Bmatrix(a & b \\ c & d)            |
-| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$ | vmatrix(a & b \\ c & d)            |
-| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$ | Vmatrix(a & b \\ c & d)            |"""
+| $\begin{align}a&=b+c \\ &=b\end{align}$| equation(a &= b \\ &= b)             |
+| $\begin{matrix}a&b\\c&d\end{matrix}$   | matrix(a & b \\ c & d)               |
+| $\begin{cases}a&b\\c&d\end{cases}$     | cases(a & b \\ c & d)                |
+| $\begin{rcases}a&b\\c&d\end{rcases}$   | rcases(a & b \\ c & d)               |
+| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ | pmatrix(a & b \\ c & d)              |
+| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$ | bmatrix(a & b \\ c & d)              |
+| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$ | Bmatrix(a & b \\ c & d)              |
+| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$ | vmatrix(a & b \\ c & d)              |
+| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$ | Vmatrix(a & b \\ c & d)              |"""
     )
 
 with st.sidebar.expander("Sets"):
