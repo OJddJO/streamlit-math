@@ -225,4 +225,3 @@ with st.form(key="input_form"):
         update_text(input)
     if col2.form_submit_button("Clear"):
         st.session_state.text = ""
-        st.rerun()
