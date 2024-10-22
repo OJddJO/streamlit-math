@@ -153,7 +153,8 @@ r"""| **KaTeX** | **Text** |
 
 st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
 
-st.session_state.text = ""
+if "text" not in st.session_state:
+    st.session_state.text = ""
 
 def evaluate_latex(text):
     try:
@@ -216,7 +217,6 @@ def update_text(text):
     latex = evaluate_latex(text)
     st.latex(latex)
 
-st.session_state.latex_container.append(st.container())
 with st.form(key="input_form"):
     input = st.text_area(label="Input", placeholder="Input", value=st.session_state.text, key="input", height=400, label_visibility="collapsed")
     col1, col2 = st.columns(2)
