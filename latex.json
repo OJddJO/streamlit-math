@@ -63,6 +63,7 @@
     "neq": "\\neq",
     "equiv": "\\Leftrightarrow",
     "implies": "\\Rightarrow",
+    "implied": "\\Leftarrow",
     "gequal": "\\geqslant",
     "lequal": "\\leqslant",
     "in_": "\\in",
