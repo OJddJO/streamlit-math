@@ -83,6 +83,7 @@ r"""| **KaTeX** | **Text** |
 | $\Leftarrow$                           | implied                              |
 | $\geqslant$                            | gequal                               |
 | $\leqslant$                            | lequal                               |
+| $\cong$                                | cong                                 |
 | $\in$                                  | in_                                  |
 | $\notin$                               | nin                                  |
 | $\subset$                              | subset                               |

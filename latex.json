@@ -66,6 +66,7 @@
     "implied": "\\Leftarrow",
     "gequal": "\\geqslant",
     "lequal": "\\leqslant",
+    "cong": "\\cong",
     "in_": "\\in",
     "notin": "\\notin",
     "subset": "\\subset"
