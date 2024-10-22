@@ -212,14 +212,14 @@ def evaluate_latex(text):
         latex += '\\\\\\color{red}\\text{!! Error !!}'
     return latex
 
-def update_text(text):
-    latex = evaluate_latex(text)
+def update_text():
+    latex = evaluate_latex(input)
     latex_container.latex(latex)
-    st.session_state.text = text
+    st.session_state.text = input
 
 latex_container = st.container()
 with st.expander(label="Input Zone", expanded=True):
-    input = st.text_area(label="Input", placeholder="Input", value=st.session_state.text, key="input", height=400, label_visibility="collapsed")
+    input = st.text_area(label="Input", placeholder="Input", value=st.session_state.text, key="input", height=400, label_visibility="collapsed", on_change=update_text)
     col1, col2 = st.columns(2)
     submit = col1.button("Submit")
     if submit:
