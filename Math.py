@@ -104,16 +104,17 @@ r"""| **KaTeX** | **Text** |
 | $\char"2102$                           | complex                              |"""
     )
 
-with st.sidebar.expander("Symbols"):
+with st.sidebar.expander("Others"):
     st.markdown(
 r"""| **KaTeX** | **Text** |
 |----------------------------------------|--------------------------------------|
+| $\color{red}a=b+c$                     | color(red)a=b+c                      |
 | $\bar{x}$                              | bar(x)                               |
 | $\dot{x}$                              | dot(x)                               |
 | $\ddot{x}$                             | ddot(x)                              |
 | $\vec{x}$                              | vec(x)                               |
 | $\widehat{x}$                          | widehat(x)                           |
-| $\infty$                               | infty                                |
+| $\infty$                               | inf                                  |
 | $\alpha$                               | alpha                                |
 | $\beta$                                | beta                                 |
 | $\gamma$                               | gamma                                |
