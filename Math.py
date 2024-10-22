@@ -224,3 +224,6 @@ with st.form(key="input_form"):
     input = st.text_area(label="Input", placeholder="Input", key="input", height=400, label_visibility="collapsed")
     if st.form_submit_button("Submit"):
         update_text(0, input)
+    if st.form_submit_button("Clear"):
+        input = ""
+        update_text(0, input)
