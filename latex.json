@@ -34,8 +34,10 @@
     "Phi": "\\Phi",
     "Psi": "\\Psi",
     "Omega": "\\Omega",
+
     "infty": "\\infty",
     "forall": "\\forall",
+    "exists": "\\exists",
 
     "natural": "\\char\"2115",
     "integer": "\\char\"2124",

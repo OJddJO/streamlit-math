@@ -41,11 +41,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-with st.sidebar.expander("Help"):
+with st.sidebar.expander("Operations"):
     st.markdown(
 r"""| **KaTeX** | **Text** |
 |----------------------------------------|--------------------------------------|
-| $\text{text}$                          | "(text)                              | #latex_func.json
+| $\text{text}$ (litteral text)          | "(text)                              |
 | $a^x$                                  | a^(x)                                |
 | $a_x$                                  | a_(x)                                |
 | $\int{x}$                              | int_(x)                              |
@@ -56,21 +56,8 @@ r"""| **KaTeX** | **Text** |
 | $\frac{a}{b}$                          | frac(a)(b)                           |
 | $\sqrt{x}$                             | sqrt(x)                              |
 | $\sqrt[n]{x}$                          | rt(n)(x)                             |
-| $\bar{x}$                              | bar(x)                               |
-| $\dot{x}$                              | dot(x)                               |
-| $\ddot{x}$                             | ddot(x)                              |
-| $\vec{x}$                              | vec(x)                               |
-| $\widehat{x}$                          | widehat(x)                           |
-| $\begin{matrix}a&b\\c&d\end{matrix}$   | matrix(a & b \\\\ c & d)             |
-| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ | pmatrix(a & b \\\\ c & d)            |
-| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$ | bmatrix(a & b \\\\ c & d)            |
-| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$ | Bmatrix(a & b \\\\ c & d)            |
-| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$ | vmatrix(a & b \\\\ c & d)            |
-| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$ | Vmatrix(a & b \\\\ c & d)            |
-| $\begin{cases}a&b\\c&d\end{cases}$     | cases(a & b \\\\ c & d)              |
-| $\begin{rcases}a&b\\c&d\end{rcases}$   | rcases(a & b \\\\ c & d)             |
-| $\infty$                               | infty                                | #latex.json
 | $\forall$                              | forall                               |
+| $\exists$                              | exists                               |
 | $\lceil$                               | lceil                                |
 | $\rceil$                               | rceil                                |
 | $\lfloor$                              | lfloor                               |
@@ -88,12 +75,45 @@ r"""| **KaTeX** | **Text** |
 | $\cong$                                | cong                                 |
 | $\in$                                  | in_                                  |
 | $\notin$                               | nin                                  |
-| $\subset$                              | subset                               |
+| $\subset$                              | subset                               |"""
+    )
+
+with st.sidebar.expander("Structures"):
+    st.markdown(
+r"""| **KaTeX** | **Text** |
+|----------------------------------------|--------------------------------------|
+| $\begin{equation}a=b\end{equation}$    | equation(a = b)                      |
+| $\begin{matrix}a&b\\c&d\end{matrix}$   | matrix(a & b \\\\ c & d)             |
+| $\begin{cases}a&b\\c&d\end{cases}$     | cases(a & b \\\\ c & d)              |
+| $\begin{rcases}a&b\\c&d\end{rcases}$   | rcases(a & b \\\\ c & d)             |
+| $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ | pmatrix(a & b \\\\ c & d)            |
+| $\begin{bmatrix}a&b\\c&d\end{bmatrix}$ | bmatrix(a & b \\\\ c & d)            |
+| $\begin{Bmatrix}a&b\\c&d\end{Bmatrix}$ | Bmatrix(a & b \\\\ c & d)            |
+| $\begin{vmatrix}a&b\\c&d\end{vmatrix}$ | vmatrix(a & b \\\\ c & d)            |
+| $\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$ | Vmatrix(a & b \\\\ c & d)            |"""
+    )
+
+with st.sidebar.expander("Sets"):
+    st.markdown(
+r"""| **KaTeX** | **Text** |
+|----------------------------------------|--------------------------------------|
 | $\char"2115$                           | natural                              |
 | $\char"2124$                           | integer                              |
 | $\char"211A$                           | rational                             |
 | $\char"211D$                           | real                                 |
-| $\char"2102$                           | complex                              |
+| $\char"2102$                           | complex                              |"""
+    )
+
+with st.sidebar.expander("Symbols"):
+    st.markdown(
+r"""| **KaTeX** | **Text** |
+|----------------------------------------|--------------------------------------|
+| $\bar{x}$                              | bar(x)                               |
+| $\dot{x}$                              | dot(x)                               |
+| $\ddot{x}$                             | ddot(x)                              |
+| $\vec{x}$                              | vec(x)                               |
+| $\widehat{x}$                          | widehat(x)                           |
+| $\infty$                               | infty                                |
 | $\alpha$                               | alpha                                |
 | $\beta$                                | beta                                 |
 | $\gamma$                               | gamma                                |
@@ -128,7 +148,8 @@ r"""| **KaTeX** | **Text** |
 | $\Phi$                                 | Phi                                  |
 | $\Psi$                                 | Psi                                  |
 | $\Omega$                               | Omega                                |"""
-)
+    )
+
 st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
 
 st.session_state.text = []
