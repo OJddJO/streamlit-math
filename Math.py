@@ -217,7 +217,7 @@ def update_text(text):
     latex = evaluate_latex(text)
     latex_container.latex(latex)
 
-latex_container = st.container
+latex_container = st.container()
 with st.form(key="input_form"):
     input = st.text_area(label="Input", placeholder="Input", value=st.session_state.text, key="input", height=400, label_visibility="collapsed")
     col1, col2 = st.columns(2)
