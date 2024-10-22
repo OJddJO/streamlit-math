@@ -218,11 +218,11 @@ def update_text(text):
     latex_container.latex(latex)
 
 latex_container = st.container()
-with st.form(key="input_form"):
+with st.expander(label="Input Zone", expanded=True):
     input = st.text_area(label="Input", placeholder="Input", value=st.session_state.text, key="input", height=400, label_visibility="collapsed")
     col1, col2 = st.columns(2)
-    if col1.form_submit_button("Submit"):
+    if col1.button("Submit"):
         update_text(input)
-    if col2.form_submit_button("Clear"):
+    if col2.button("Clear"):
         st.session_state.text = ""
         st.rerun()
