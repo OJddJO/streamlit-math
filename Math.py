@@ -216,6 +216,7 @@ def update_text(text):
     st.session_state.text = text
     latex = evaluate_latex(text)
     latex_container.latex(latex)
+    st.rerun()
 
 latex_container = st.container()
 with st.form(key="input_form"):
