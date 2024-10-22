@@ -209,7 +209,7 @@ def evaluate_latex(text):
                     text = text[1:]
                     i = 0
     except:
-        latex += '\\text{\n!!Error!!}'
+        latex += '\\\\\\text{!!Error!!}'
     return latex
 
 def update_text(page, text):
