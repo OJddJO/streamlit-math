@@ -45,7 +45,7 @@ st.markdown(
 with st.sidebar.expander("Help"):
     st.markdown(r"""| **KaTeX** | **Text** |
 |-----------|----------|
-| $\text{text}$| text(text)| #latex_func.json
+| $\text{text}$| "(text)| #latex_func.json
 | $a^x$    | a^(x)    |
 | $a_x$    | a_(x)    |
 | $\int{x}$ | int_(x)   |
