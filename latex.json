@@ -56,6 +56,7 @@
     "labs": "\\left|",
     "rabs": "\\right|",
 
+    "not": "\\neg",
     "sin": "\\sin",
     "cos": "\\cos",
     "to" : "\\to",
@@ -68,6 +69,7 @@
     "lequal": "\\leqslant",
     "cong": "\\cong",
     "in_": "\\in",
+    "nin": "\\notin",
     "notin": "\\notin",
     "subset": "\\subset"
 }
