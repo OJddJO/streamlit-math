@@ -56,7 +56,8 @@
     "labs": "\\left|",
     "rabs": "\\right|",
 
-    "not": "\\neg",
+    "neg": "\\neg",
+    "not": "\\not",
     "sin": "\\sin",
     "cos": "\\cos",
     "to" : "\\to",

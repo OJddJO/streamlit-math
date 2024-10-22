@@ -76,6 +76,7 @@ r"""| **KaTeX** | **Text** |
 | $\lfloor$                              | lfloor                               |
 | $\rfloor$                              | rfloor                               |
 | $\neg a$                               | neg a                                |
+| $\not a$                               | not a                                |
 | $\to$                                  | to                                   |
 | $\approx$                              | approx                               |
 | $\neq$                                 | neq                                  |
