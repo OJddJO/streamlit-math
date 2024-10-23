@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_ace as ace
 import json
 from PIL import Image
 
@@ -153,14 +154,11 @@ r"""| **KaTeX** | **Text** |
 
 st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
 
-if "text" not in st.session_state:
-    st.session_state.text = ""
-
+latex_dict = json.load(open("latex.json", "r", encoding="utf-8"))
+latex_func = json.load(open("latex_func.json", "r", encoding="utf-8"))
 def evaluate_latex(text):
     try:
         latex = ""
-        latex_dict = json.load(open("latex.json", "r"))
-        latex_func = json.load(open("latex_func.json", "r"))
         i = 0
         while text != '':
             #check if text[:i] is in latex_dict
@@ -203,7 +201,7 @@ def evaluate_latex(text):
                 i += 1
                 if i > len(text):
                     if text.find("\n") == 0:
-                        latex += '\\\\ '
+                        latex += ' \\\\ '
                     else:
                         latex += text[0]
                     text = text[1:]
@@ -217,8 +215,18 @@ def update_text(text):
     latex_container.latex(latex)
 
 latex_container = st.container()
-with st.form(key="input_form"):
-    input = st.text_area(label="Input", placeholder="Input", value=st.session_state.text, key="input", height=400, label_visibility="collapsed")
-    col1, col2 = st.columns(2)
-    if col1.form_submit_button("Submit"):
-        update_text(input)
+input_container = st.container()
+def main():
+    with input_container:
+        content = ace.st_ace(
+            placeholder="Enter your text here",
+            language=None,
+            theme="dracula",
+            keybinding="vscode",
+            font_size=14,
+            tab_size=4,
+        )
+
+    update_text(content)
+
+main()
