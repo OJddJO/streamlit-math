@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit_ace as ace
 import json
 from PIL import Image
 
@@ -154,8 +153,14 @@ r"""| **KaTeX** | **Text** |
 
 st.sidebar.markdown("**Made with ❤️ by** [***OJddJO***](https://github.com/OJddJO/)")
 
+if "latex" not in st.session_state:
+    st.session_state.latex = []
+if "text" not in st.session_state:
+    st.session_state.text = []
+
 latex_dict = json.load(open("latex.json", "r", encoding="utf-8"))
 latex_func = json.load(open("latex_func.json", "r", encoding="utf-8"))
+
 def evaluate_latex(text):
     try:
         latex = ""
@@ -210,23 +215,72 @@ def evaluate_latex(text):
         latex += '\\\\\\color{red}\\text{!! Error !!}'
     return latex
 
-def update_text(text):
-    latex = evaluate_latex(text)
-    latex_container.latex(latex)
+latex_container, source_container = st.tabs(["Latex", "Source"])
 
-latex_container = st.container()
-input_container = st.container()
-def main():
-    with input_container:
-        content = ace.st_ace(
-            placeholder="Enter your text here",
-            language=None,
-            theme="dracula",
-            keybinding="vscode",
-            font_size=14,
-            tab_size=4,
-        )
+prompt = st.chat_input("Enter your text here", key="latex_prompt")
+if prompt:
+    st.session_state.latex.append(evaluate_latex(prompt))
+    st.session_state.text.append(prompt)
 
-    update_text(content)
+edit_container, delete_container, clear_container, save_container, save_as_latex_container, load_container = st.columns(6)
 
-main()
+if clear_container.button("Clear", use_container_width=True):
+    st.session_state.latex = []
+    st.session_state.text = []
+
+with delete_container.popover("Delete line", use_container_width=True):
+    for i in range(len(st.session_state.latex)):
+        latex_render, del_button = st.columns([9, 1])
+        latex_render.latex(st.session_state.latex[i])
+        if del_button.button(label="", icon="❌", key=i, use_container_width=True):
+            del st.session_state.latex[i]
+            del st.session_state.text[i]
+            st.rerun()
+
+@st.dialog("Edit line")
+def edit_line(i):
+    st.latex(st.session_state.latex[i])
+    edit = st.text_input("Edit your text here", value=st.session_state.text[i], key=f"edit_prompt_{i}")
+    if edit != st.session_state.text[i]:
+        st.session_state.latex[i] = evaluate_latex(edit)
+        st.session_state.text[i] = edit
+        st.rerun()
+
+with edit_container.popover("Edit line", use_container_width=True):
+    for i in range(len(st.session_state.latex)):
+        latex_render, edit_button = st.columns([9, 1])
+        latex_render.latex(st.session_state.latex[i])
+        if edit_button.button(label="", icon="🖊️", key=f"edit_btn_{i}", use_container_width=True):
+            edit_line(i)
+
+@st.dialog("Save")
+def save():
+    filename = st.text_input("File name", value="my_math_save.sm", key="file_name")
+    st.download_button("Download", str(st.session_state.text), filename)
+if save_container.button("Save", use_container_width=True):
+    save()
+
+@st.dialog("Save as LaTeX")
+def save_as_latex():
+    filename = st.text_input("File name", value="my_math_save.tex", key="file_name")
+    st.download_button("Download", str(st.session_state.latex), filename)
+if save_as_latex_container.button("Save as LaTeX", use_container_width=True):
+    save()
+
+@st.dialog("Load")
+def load():
+    file = st.file_uploader("Upload a file", type="sm")
+    if file:
+        st.session_state.text = eval(file.read())
+        for line in st.session_state.text:
+            st.session_state.latex.append(evaluate_latex(line))
+        st.rerun()
+if load_container.button("Load", use_container_width=True):
+    load()
+
+
+with latex_container:
+    st.container(border=True, height=550).latex("\\\\".join(st.session_state.latex))
+
+with source_container:
+    st.container(border=True, height=550).code("\n".join(st.session_state.text))
