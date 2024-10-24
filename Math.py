@@ -60,7 +60,7 @@ r"""| **KaTeX** | **Text** |
 | $\exists$                              | exists                               |
 | $\lceil{x}\rceil$                      | ceil(x)                              |
 | $\lfloor{x}\rfloor$                    | floor(x)                             |
-| $\\quotedblleft{quote}\\quotedblright$ | quote(quote)                         |
+| $\\lq{quote}\\rq$                      | quote(quote)                         |
 | $\neg a$                               | neg a                                |
 | $\not a$                               | not a                                |
 | $\to$                                  | to                                   |
