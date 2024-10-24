@@ -267,7 +267,7 @@ def save_as_latex():
     if filename.split(".")[-1] != "md":
         filename += "md"
     st.download_button("Download", icon="📥", data="$"+"\n\\\\".join(st.session_state.latex)+"$", file_name=filename)
-if save_as_latex_container.button("Save as Markdown",  icon="📥", use_container_width=True):
+if save_as_latex_container.button("Save as .md",  icon="📥", use_container_width=True):
     save_as_latex()
 
 @st.dialog("Load")
