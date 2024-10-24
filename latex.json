@@ -73,7 +73,8 @@
     "gequal": "\\geqslant",
     "lequal": "\\leqslant",
     "cong": "\\cong",
-    "in_": "\\in",
+    "in": "\\in",
+    "int": "\\int",
     "nin": "\\notin",
     "subset": "\\subset"
 }

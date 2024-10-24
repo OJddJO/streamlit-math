@@ -161,12 +161,15 @@ if "text" not in st.session_state:
 latex_dict = json.load(open("latex.json", "r", encoding="utf-8"))
 latex_func = json.load(open("latex_func.json", "r", encoding="utf-8"))
 
-def evaluate_latex(text):
+def evaluate_latex(text:str) -> str:
     try:
         latex = ""
         i = 0
         while text != '':
             #check if text[:i] is in latex_dict
+            parenthesis = text.find("(")
+            if parenthesis != -1 and text[:parenthesis] in latex_dict:
+                i = parenthesis
             if text[:i] in latex_func: #if it is
                 func = latex_func[text[:i]] #add latex to func
                 latex += func[0]
@@ -199,6 +202,10 @@ def evaluate_latex(text):
                 i = 0 
                 text = text[i:] #remove from text
             elif text[:i] in latex_dict: #if in latex_dict
+                next_space = text.find(" ")
+                if next_space != -1:
+                    if text[:next_space] in latex_dict:
+                        i = next_space
                 latex += latex_dict[text[:i]] #add latex
                 text = text[i:] #remove from text
                 i = 0
@@ -232,7 +239,7 @@ with delete_container.popover("Delete line", icon="❌", use_container_width=Tru
     for i in range(len(st.session_state.latex)):
         latex_render, del_button = st.columns([9, 1])
         latex_render.latex(st.session_state.latex[i])
-        if del_button.button(label="", icon="❌", key=i, use_container_width=True):
+        if del_button.button(label="❌", key=i, use_container_width=True):
             del st.session_state.latex[i]
             del st.session_state.text[i]
             st.rerun()
@@ -249,7 +256,7 @@ with edit_container.popover("Edit line", icon="✏️", use_container_width=True
     for i in range(len(st.session_state.latex)):
         latex_render, edit_button = st.columns([9, 1])
         latex_render.latex(st.session_state.latex[i])
-        if edit_button.button(label="", icon="✏️", key=f"edit_btn_{i}", use_container_width=True):
+        if edit_button.button(label="✏️", key=f"edit_btn_{i}", use_container_width=True):
             edit_line(i)
 
 @st.dialog("Save")
