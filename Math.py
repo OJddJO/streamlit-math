@@ -224,11 +224,11 @@ if prompt:
 
 edit_container, delete_container, clear_container, save_container, save_as_latex_container, load_container = st.columns(6)
 
-if clear_container.button("Clear", use_container_width=True):
+if clear_container.button("Clear", icon="🗑️", use_container_width=True):
     st.session_state.latex = []
     st.session_state.text = []
 
-with delete_container.popover("Delete line", use_container_width=True):
+with delete_container.popover("Delete line", icon="❌", use_container_width=True):
     for i in range(len(st.session_state.latex)):
         latex_render, del_button = st.columns([9, 1])
         latex_render.latex(st.session_state.latex[i])
@@ -245,26 +245,29 @@ def edit_line(i):
         st.session_state.latex[i] = evaluate_latex(edit)
         st.session_state.text[i] = edit
         st.rerun()
-
-with edit_container.popover("Edit line", use_container_width=True):
+with edit_container.popover("Edit line", icon="✏️", use_container_width=True):
     for i in range(len(st.session_state.latex)):
         latex_render, edit_button = st.columns([9, 1])
         latex_render.latex(st.session_state.latex[i])
-        if edit_button.button(label="", icon="🖊️", key=f"edit_btn_{i}", use_container_width=True):
+        if edit_button.button(label="", icon="✏️", key=f"edit_btn_{i}", use_container_width=True):
             edit_line(i)
 
 @st.dialog("Save")
 def save():
     filename = st.text_input("File name", value="my_math_save.sm", key="file_name")
-    st.download_button("Download", str(st.session_state.text), filename)
-if save_container.button("Save", use_container_width=True):
+    if filename.split(".")[-1] != "sm":
+        filename += "sm"
+    st.download_button("Download", icon="📥", data=str(st.session_state.text), file_name=filename)
+if save_container.button("Save", icon="📥", use_container_width=True):
     save()
 
 @st.dialog("Save as Markdown")
 def save_as_latex():
     filename = st.text_input("File name", value="my_math_save.md", key="file_name")
-    st.download_button("Download", "$"+"\n\\\\".join(st.session_state.latex)+"$", filename)
-if save_as_latex_container.button("Save as Markdown", use_container_width=True):
+    if filename.split(".")[-1] != "md":
+        filename += "md"
+    st.download_button("Download", icon="📥", data="$"+"\n\\\\".join(st.session_state.latex)+"$", file_name=filename)
+if save_as_latex_container.button("Save as Markdown",  icon="📥", use_container_width=True):
     save_as_latex()
 
 @st.dialog("Load")
@@ -275,7 +278,7 @@ def load():
         for line in st.session_state.text:
             st.session_state.latex.append(evaluate_latex(line))
         st.rerun()
-if load_container.button("Load", use_container_width=True):
+if load_container.button("Load", icon="📤", use_container_width=True):
     load()
 
 
