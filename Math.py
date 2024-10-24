@@ -263,9 +263,9 @@ if save_container.button("Save", use_container_width=True):
 @st.dialog("Save as LaTeX")
 def save_as_latex():
     filename = st.text_input("File name", value="my_math_save.tex", key="file_name")
-    st.download_button("Download", str(st.session_state.latex), filename)
+    st.download_button("Download", "\n".join(st.session_state.latex), filename)
 if save_as_latex_container.button("Save as LaTeX", use_container_width=True):
-    save()
+    save_as_latex()
 
 @st.dialog("Load")
 def load():
