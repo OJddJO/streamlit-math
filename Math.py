@@ -50,9 +50,9 @@ r"""| **KaTeX** | **Text** |
 | $a_x$                                  | a_(x)                                |
 | $\int x$                               | int x                                |
 | $\int_{a}^{b} x$                       | int_(a)^(b) x                        |
-| $\sum_{a}^{b}{x}$                      | sum(a)(b)(x)                         |
-| $\prod_{a}^{b}{x}$                     | prod(a)(b)(x)                        |
-| $\lim_{x \to 2}{x}$                    | lim(x to 2)(x)                       |
+| $\displaystyle\sum_{a}^{b}{x}$         | sum(a)(b)(x)                         |
+| $\displaystyle\prod_{a}^{b}{x}$        | prod(a)(b)(x)                        |
+| $\lim\limits_{x \to 2}{x}$             | lim(x to 2)(x)                       |
 | $\frac{a}{b}$                          | frac(a)(b)                           |
 | $\sqrt{x}$                             | sqrt(x)                              |
 | $\sqrt[n]{x}$                          | rt(n)(x)                             |
@@ -60,7 +60,7 @@ r"""| **KaTeX** | **Text** |
 | $\exists$                              | exists                               |
 | $\lceil{x}\rceil$                      | ceil(x)                              |
 | $\lfloor{x}\rfloor$                    | floor(x)                             |
-| $\\textquotedblleft{quote}\\textquotedblright$| quote(quote)                  |
+| $\\quotedblleft{quote}\\quotedblright$ | quote(quote)                         |
 | $\neg a$                               | neg a                                |
 | $\not a$                               | not a                                |
 | $\to$                                  | to                                   |
