@@ -170,7 +170,7 @@ def evaluate_latex(text:str) -> str:
             parenthesis = text.find("(")
             if parenthesis != -1 and text[:parenthesis] in latex_dict:
                 i = parenthesis
-            if text[:i] in latex_func: #if it is
+            if text[:i] in latex_func and text[i]=="(": #if it is
                 func = latex_func[text[:i]] #add latex to func
                 latex += func[0]
                 nb_args = func[1] #get number of args
