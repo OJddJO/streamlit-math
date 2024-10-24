@@ -58,12 +58,9 @@ r"""| **KaTeX** | **Text** |
 | $\sqrt[n]{x}$                          | rt(n)(x)                             |
 | $\forall$                              | forall                               |
 | $\exists$                              | exists                               |
-| $\lceil$                               | lceil                                |
-| $\rceil$                               | rceil                                |
-| $\lfloor$                              | lfloor                               |
-| $\rfloor$                              | rfloor                               |
-| $\text{\textquotedblleft}$             | lq                                   |
-| $\text{\textquotedblright}$            | rq                                   |
+| $\lceil{x}\rceil$                      | ceil(x)                              |
+| $\lfloor{x}\rfloor$                    | floor(x)                             |
+| $\\text{\\textquotedblleft}{quote}\\text{\\textquotedblright}$| quote(quote)  |
 | $\neg a$                               | neg a                                |
 | $\not a$                               | not a                                |
 | $\to$                                  | to                                   |
