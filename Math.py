@@ -48,8 +48,8 @@ r"""| **KaTeX** | **Text** |
 | $\text{text}$ (litteral text)          | "(text)                              |
 | $a^x$                                  | a^(x)                                |
 | $a_x$                                  | a_(x)                                |
-| $\int{x}$                              | int_(x)                              |
-| $\int_{a}^{b}{x}$                      | Int_(a)(b)(x)                        |
+| $\int x$                               | int x                                |
+| $\int_{a}^{b} x$                       | int_(a)^(b) x                        |
 | $\sum_{a}^{b}{x}$                      | sum(a)(b)(x)                         |
 | $\prod_{a}^{b}{x}$                     | prod(a)(b)(x)                        |
 | $\lim_{x \to 2}{x}$                    | lim(x to 2)(x)                       |
@@ -73,7 +73,7 @@ r"""| **KaTeX** | **Text** |
 | $\geqslant$                            | gequal                               |
 | $\leqslant$                            | lequal                               |
 | $\cong$                                | cong                                 |
-| $\in$                                  | in_                                  |
+| $\in$                                  | in                                   |
 | $\notin$                               | nin                                  |
 | $\subset$                              | subset                               |"""
     )
