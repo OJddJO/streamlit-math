@@ -283,4 +283,4 @@ with latex_container:
     st.container(border=True, height=550).latex("\\\\".join(st.session_state.latex))
 
 with source_container:
-    st.container(border=True, height=550).code("\n".join(st.session_state.text))
+    st.container(border=True, height=550).code("\n".join(st.session_state.text), language=None)
