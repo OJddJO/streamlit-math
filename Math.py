@@ -62,6 +62,8 @@ r"""| **KaTeX** | **Text** |
 | $\rceil$                               | rceil                                |
 | $\lfloor$                              | lfloor                               |
 | $\rfloor$                              | rfloor                               |
+| $\text{\textquotedblleft}$             | lq                                   |
+| $\text{\textquotedblright}$            | rq                                   |
 | $\neg a$                               | neg a                                |
 | $\not a$                               | not a                                |
 | $\to$                                  | to                                   |

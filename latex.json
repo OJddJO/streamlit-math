@@ -47,6 +47,8 @@
     "real": "\\char\"211D",
     "complex": "\\char\"2102",
 
+    "lq": "\\text{\\textquotedblleft}",
+    "rq": "\\text{\\textquotedblright}",
     "(": "\\left\\lparen ",
     ")": "\\right\\rparen ",
     "[": "\\left\\lbrack ",
