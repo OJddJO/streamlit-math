@@ -28,7 +28,7 @@
     "rcases": ["\\begin{rcases}¤1\\end{rcases}", 1],
     "align": ["\\begin{aligned}¤1\\end{aligned}", 1],
 
-    "quote": ["\\left\\text{\\textquotedblleft}{¤1}\\right\\text{\\textquotedblright}", 1],
+    "quote": ["\\text{\\textquotedblleft}{¤1}\\text{\\textquotedblright}", 1],
     "ceil": ["\\left\\lceil{¤1}\\right\\rceil", 1],
     "floor": ["\\left\\lfloor{¤1}\\right\\rfloor", 1]
 }
