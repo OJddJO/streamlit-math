@@ -107,7 +107,7 @@ with st.sidebar.expander("Others"):
     st.markdown(
 r"""| **KaTeX** | **Text** |
 |----------------------------------------|--------------------------------------|
-| $\left\lparen\left\lbrace x \right\rbreace\rparen$| left({}right)             |
+| $\left\lparen\lbrace x \rbrace\right\rparen$| left({}right)                   |
 | $\color{red}a=b+c$                     | color(red)a=b+c                      |
 | $\bar{x}$                              | bar(x)                               |
 | $\dot{x}$                              | dot(x)                               |
