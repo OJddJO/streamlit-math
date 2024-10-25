@@ -55,6 +55,7 @@
     "]": "\\rbrack ",
     "{": "\\lbrace ",
     "}": "\\rbrace ",
+    "bs": "\\backslash",
 
     "neg": "\\neg",
     "not": "\\not",

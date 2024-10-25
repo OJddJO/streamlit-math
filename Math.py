@@ -74,7 +74,8 @@ r"""| **KaTeX** | **Text** |
 | $\cong$                                | cong                                 |
 | $\in$                                  | in                                   |
 | $\notin$                               | nin                                  |
-| $\subset$                              | subset                               |"""
+| $\subset$                              | subset                               |
+| $\backslash$                           | bs                                   |"""
     )
 
 with st.sidebar.expander("Structures"):
